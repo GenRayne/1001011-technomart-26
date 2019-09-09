@@ -7,11 +7,13 @@
   <body>
     <header>
       <div>
-        <img src="img/index-logo.svg" width="109" height="19" alt="Логотип магазина Техномарт">
-        <div>Поиск:</div>
-        <div>Закладки:</div>
-        <div>Корзина:</div>
-        <a href="">Оформить заказ</a>
+        <a><img src="img/index-logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
+        <span>Поиск:</span>
+        <ul class="user-actions">
+          <li><a href="">Закладки: <span>0</span></a></li>
+          <li><a href="">Корзина: <span>0</span></a></li>
+          <li><a href="">Оформить заказ</a></li>
+        </ul>
       </div>
 
       <div>
@@ -22,12 +24,13 @@
         </p>
 
         <div>
-          <div>
+          <a href="tel:+78125550555">
             +7 (812) 555-05-55
-          </div>
-          <div>
+          </a>
+
+          <span>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-          </div>
+          </span>
         </div>
         
         <div>
@@ -39,7 +42,7 @@
       <nav>
         <ul>
           <li>
-            <a href="index.html">Главная</a>
+            <a>Главная</a>
           </li>
           <li>
             <a href="">Компания</a>
