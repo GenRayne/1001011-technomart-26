@@ -140,31 +140,37 @@
           <label for="mains">Сетевые</label>
         </div>
       </section>
-      <button type="button">Показать</button>
+      <button type="submit">Показать</button>
     </form>
 
     <section>
       <section>
         <h2>Сортировка:</h2>
-        <p>
-          <span>
-            По цене
-          </span>
-          <span>
-            По типу
-          </span>
-          <span>
-            По функционалу
-          </span>
-          <span>
-            <span>
-              <span class="visually-hidden">По возрастанию</span>
-            </span>
-            <span>
-              <span class="visually-hidden">По убыванию</span>
-            </span>
-          </span>
-        </p>
+        <ul>
+          <li>
+            <a href="">По цене</a>
+          </li>
+          <li>
+            <a href="">По типу</a>
+          </li>
+          <li>
+            <a href="">По функционалу</a>
+          </li>
+          <li>
+            <ul>
+              <li>
+                <a href="">
+                  <span class="visually-hidden">По возрастанию</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span class="visually-hidden">По убыванию</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </section>
       
       <section>
@@ -292,15 +298,6 @@
           </li>
         </ul>
 
-        <div>
-          <div><!-- Кнопка "Закрыть" --></div>
-          <p>Товар добавлен в корзину!</p>
-          <div>
-            <a href="">Оформить заказ</a>
-            <a href="catalog.html">Продолжить покупки</a>
-          </div>
-        </div>
-
         <section>
           <h3>Навигация по страницам</h3>
           <p>
@@ -409,5 +406,14 @@
       </div>
     </section>
   </footer>
+
+  <section class="modal">
+      <div><!-- Кнопка "Закрыть" --></div>
+      <p>Товар добавлен в корзину!</p>
+      <div>
+        <a href="">Оформить заказ</a>
+        <a href="catalog.html">Продолжить покупки</a>
+      </div>
+  </section>
 </body>
 </html>
