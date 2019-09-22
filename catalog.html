@@ -8,7 +8,9 @@
   <header>
     <section>
       <a href="index.html"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
-      <span>Поиск:</span>
+      <form action="" method="GET">
+        <input id="search" type="search" value="Поиск:">
+      </form>
       <ul class="user-actions">
         <li><a href="">Закладки: <span>0</span></a></li>
         <li><a href="">Корзина: <span>10</span></a></li>
@@ -36,7 +38,7 @@
       <section>
         <p>
           <a href="">Равшан Джамшутович</a>
-          <a href=""><!-- Выйти --></a>
+          <a href=""><span class="visually-hidden">Выход</span></a>
         </p>
 
         <ul>
@@ -79,7 +81,11 @@
 
   <main>
     <ol>
-      <li><a href="index.html" title="Главная страница"><!-- Главная --></a></li>
+      <li>
+        <a href="index.html" title="Главная страница">
+          <span class="visually-hidden">Главная страница</span>
+        </a>
+      </li>
       <li><a href="">Каталог</a></li>
       <li><a href="">Инструмент</a></li>
       <li><a>Перфораторы</a></li>
@@ -102,11 +108,37 @@
       </section>
       <section>
         <h3>Производители:</h3>
-        <!-- Фильтр по производителям -->
+        <div>
+          <input id="bosch" type="checkbox" name="manufacturer">
+          <label for="bosch">Bosch</label>
+        </div>
+        <div>
+          <input id="interskol" type="checkbox" name="manufacturer">
+          <label for="interskol">Интерскол</label>
+        </div>
+        <div>
+          <input id="makita" type="checkbox" name="manufacturer">
+          <label for="makita">Makita</label>
+        </div>
+        <div>
+          <input id="dewalt" type="checkbox" name="manufacturer">
+          <label for="dewalt">Dewalt</label>
+        </div>
+        <div>
+          <input id="hitachi" type="checkbox" name="manufacturer">
+          <label for="hitachi">Hitachi</label>
+        </div>
       </section>
       <section>
         <h3>Питание:</h3>
-        <!-- Фильтр по питанию -->
+        <div>
+          <input id="accum" type="radio" name="power">
+          <label for="accum">Аккумуляторные</label>
+        </div>
+        <div>
+          <input id="accum" type="radio" name="power">
+          <label for="accum">Сетевые</label>
+        </div>
       </section>
       <button type="button">Показать</button>
     </form>
@@ -125,14 +157,18 @@
             По функционалу
           </span>
           <span>
-            <span>По возрастанию</span>
-            <span>По убыванию</span>
+            <span>
+              <span class="visually-hidden">По возрастанию</span>
+            </span>
+            <span>
+              <span class="visually-hidden">По убыванию</span>
+            </span>
           </span>
         </p>
       </section>
       
       <section>
-        <h2>Список товаров</h2>
+        <h2 class="visually-hidden">Список товаров</h2>
         
         <ul>
           <li>
@@ -256,6 +292,15 @@
           </li>
         </ul>
 
+        <div>
+          <div><!-- Кнопка "Закрыть" --></div>
+          <p>Товар добавлен в корзину!</p>
+          <div>
+            <a href="">Оформить заказ</a>
+            <a href="catalog.html">Продолжить покупки</a>
+          </div>
+        </div>
+
         <section>
           <h3>Навигация по страницам</h3>
           <p>
@@ -336,13 +381,19 @@
 
       <ul>
         <li>
-          <a href="https://vk.com">Вконтакте</a>
+          <a href="https://vk.com">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://www.facebook.com/">
+            <span class="visually-hidden">Facebook</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.instagram.com/">
+            <span class="visually-hidden">Instagram</span>
+          </a>
         </li>
       </ul>
 
