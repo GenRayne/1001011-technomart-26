@@ -8,7 +8,9 @@
   <header>
     <section>
       <a><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
-      <span>Поиск:</span>
+      <form action="" method="GET">
+        <input id="search" type="search" value="Поиск:">
+      </form>
       <ul class="user-actions">
         <li><a href="">Закладки: <span>0</span></a></li>
         <li><a href="">Корзина: <span>0</span></a></li>
@@ -67,11 +69,10 @@
   </header>
   
   <main>
-    <h1>Техномарт</h1>
-    <!-- Новая разметка -->
+    <h1 class="visually-hidden">Техномарт</h1>
 
     <section>
-      <h2>Товары и услуги</h2>
+      <h2 class="visually-hidden">Товары и услуги</h2>
 
       <article>
         <h3>Материалы</h3>
@@ -274,11 +275,9 @@
       </section>
 
     </section>
-
-    <!-- Конец новой разметки -->
     
     <section>
-      <h2>О компании</h2>
+      <h2 class="visually-hidden">О компании</h2>
       <section>
         <h3>Компания "Техномарт"</h3>
         <p>
@@ -305,7 +304,23 @@
         <a href="">
           <img src="img/map.png" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </a>
+        <div>
+          <h4 class="visually-hidden">Карта</h4>
+          <div><!-- Кнопка "Закрыть" --></div>
+          <!-- Карта -->
+        </div>
         <a href="">Заблудились? Напишите нам!</a>
+        <form action="" method="POST"></form>
+          <div><!-- Кнопка "Закрыть" --></div>
+          <h4 class="visually-hidden">Напишите нам</h4>
+          <label for="name">Ваше имя:</label>
+          <input id="name" type="text" name="name" placeholder="Имя Фамилия">
+          <label for="mail">Ваш e-mail:</label>
+          <input id="mail" type="text" name="mail" placeholder="email@example.com">
+          <label for="message">Текст письма:</label>
+          <textarea name="message" id="message" rows="5" placeholder="В свободной форме"></textarea>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </section>
   </main>
@@ -369,13 +384,19 @@
 
       <ul>
         <li>
-          <a href="https://vk.com">Вконтакте</a>
+          <a href="https://vk.com">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/">Facebook</a>
+          <a href="https://www.facebook.com/">
+            <span class="visually-hidden">Facebook</span>
+          </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/">Instagram</a>
+          <a href="https://www.instagram.com/">
+            <span class="visually-hidden">Instagram</span>
+          </a>
         </li>
       </ul>
 
