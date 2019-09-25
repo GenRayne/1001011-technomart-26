@@ -95,19 +95,21 @@
 
     <form>
       <h2>Фильтр:</h2>
-      <section>
-        <h3>Цена:</h3>
+      <fieldset>
+        <legend>Цена:</legend>
         <!-- Фильтр по цене -->
         <p>
           <span><!-- ползунок 1 --></span>
           <span><!-- ползунок 2 --></span>
         </p>
         <p>
-          <span>0</span> - <span>30000</span>
+          <input id="min-price" type="text" name="min-price" value="0">
+          -
+          <input id="min-price" type="text" name="min-price" value="30000">
         </p>
-      </section>
-      <section>
-        <h3>Производители:</h3>
+      </fieldset>
+      <fieldset>
+        <legend>Производители:</legend>
         <div>
           <input id="bosch" type="checkbox" name="manufacturer">
           <label for="bosch">Bosch</label>
@@ -128,9 +130,9 @@
           <input id="hitachi" type="checkbox" name="manufacturer">
           <label for="hitachi">Hitachi</label>
         </div>
-      </section>
-      <section>
-        <h3>Питание:</h3>
+      </fieldset>
+      <fieldset>
+        <legend>Питание:</legend>
         <div>
           <input id="battery" type="radio" name="power">
           <label for="battery">Аккумуляторные</label>
@@ -139,7 +141,7 @@
           <input id="mains" type="radio" name="power">
           <label for="mains">Сетевые</label>
         </div>
-      </section>
+      </fieldset>
       <button type="submit">Показать</button>
     </form>
 
