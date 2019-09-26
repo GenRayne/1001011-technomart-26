@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Техномарт</title>
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
@@ -305,7 +308,7 @@
         <a href="">
           <img src="img/map.png" width="300" height="158" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
         </a>
-        <div>
+        <div class="hidden">
           <h4 class="visually-hidden">Карта</h4>
           <div><!-- Кнопка "Закрыть" --></div>
           <!-- Карта -->
@@ -404,7 +407,7 @@
   </footer>
   
   <section class="modal">
-    <form action="" method="POST">
+    <form class="hidden" action="" method="POST">
       <div><!-- Кнопка "Закрыть" --></div>
       <h4 class="visually-hidden">Напишите нам</h4>
       <label for="name">Ваше имя:</label>
