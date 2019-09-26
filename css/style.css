@@ -1,3 +1,83 @@
+body {
+  font-family: "Cuprum", "Arial", sans-serif;
+}
+
+/*====================== Header ======================*/
+
+header {
+  background-color: #f4f7f9;
+}
+
+header .top-panel,
+nav {
+  background-color: #293449;
+}
+
+header a {
+  color: #ffffff;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+nav ul,
+.top-panel ul,
+.account-area ul {
+  padding: 0;
+  list-style: none;
+}
+
+.main-logo {
+  background-color: #ee3643;
+}
+
+.search {
+  background-color: #293449;
+  border: none;
+}
+
+.search-text {
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.full-cart {
+  background-color: #ee3643;
+}
+
+.order {
+  background-color: #63a63e;
+}
+
+.site-description {
+  color: #ee3643;
+  font-size: 16px;
+  font-style: italic;
+}
+
+header .address {
+  color: #32425c;
+  font-size: 14px;
+}
+
+.phone-box {
+  color: #ee3643;
+  font-size: 21px;
+}
+
+.account-area a {
+  font-size: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.account-links a {
+  font-size: 16px;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/*=================== Прячущие классы ===================*/
+
 .hidden {
   display: none;
 }
