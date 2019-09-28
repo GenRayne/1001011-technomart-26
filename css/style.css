@@ -13,9 +13,12 @@ header {
   background-color: #f4f7f9;
 }
 
-header .top-panel,
-nav {
+header .top-panel {
   background-color: #293449;
+}
+
+nav {
+  background-color: #32425c;
 }
 
 header a {
@@ -24,9 +27,7 @@ header a {
   line-height: 18px;
 }
 
-nav ul,
-.top-panel ul,
-.account-area ul {
+header ul {
   padding: 0;
   list-style: none;
 }
@@ -68,7 +69,7 @@ header .address {
   line-height: 24px;
 }
 
-.phone-box {
+header .phone {
   color: #ee3643;
   font-size: 21px;
   line-height: 21px;
@@ -117,7 +118,55 @@ header .address {
 
 /*======================== Footer ========================*/
 
+footer {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #32425c;
+}
 
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.company-links a {
+  color: #f1f5f7;
+}
+
+.offers-links a {
+  color: #ffd180;
+}
+
+footer .address,
+footer .phone {
+  color: #f3f7f9;
+}
+
+.bottom-panel {
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #293449;
+}
+
+.copyright {
+  color: #ffffff;
+}
+
+.social {
+  display: block;
+  width: 42px;
+  height: 42px;
+  background-color: #212a3a;
+  border-radius: 50%;
+}
+
+.feedback span {
+  color: #ffffff;
+}
+
+.feedback a {
+  color: #ffd180;
+}
 
 /*=================== Прячущие классы ===================*/
 
