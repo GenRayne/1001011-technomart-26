@@ -1,5 +1,10 @@
 body {
+  color: #000000;
   font-family: "Cuprum", "Arial", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*====================== Header ======================*/
@@ -16,7 +21,7 @@ nav {
 header a {
   color: #ffffff;
   font-size: 17px;
-  text-decoration: none;
+  line-height: 18px;
 }
 
 nav ul,
@@ -37,6 +42,8 @@ nav ul,
 
 .search-text {
   color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
   font-family: inherit;
 }
 
@@ -51,30 +58,66 @@ nav ul,
 .site-description {
   color: #ee3643;
   font-size: 16px;
+  line-height: 23px;
   font-style: italic;
 }
 
 header .address {
   color: #32425c;
   font-size: 14px;
+  line-height: 24px;
 }
 
 .phone-box {
   color: #ee3643;
   font-size: 21px;
+  line-height: 21px;
 }
 
 .account-area a {
   font-size: 21px;
+  line-height: 21px;
   color: #000000;
   background-color: #ffffff;
 }
 
 .account-links a {
   font-size: 16px;
+  line-height: 18px;
   text-decoration: underline;
   background-color: transparent;
 }
+
+/*=================== Основной контент ===================*/
+
+.section-heading {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.plain-text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.btn {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+}
+
+.list-item {
+  font-size: 18px;
+  line-height: 20px;
+}
+
+/*======================== Footer ========================*/
+
+
 
 /*=================== Прячущие классы ===================*/
 
