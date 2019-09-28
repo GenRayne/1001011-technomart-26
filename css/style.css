@@ -1,6 +1,6 @@
 body {
-  color: #000000;
   font-family: "Cuprum", "Arial", sans-serif;
+  color: #000000;
 }
 
 a {
@@ -22,9 +22,9 @@ nav {
 }
 
 header a {
-  color: #ffffff;
   font-size: 17px;
   line-height: 18px;
+  color: #ffffff;
 }
 
 header ul {
@@ -34,6 +34,15 @@ header ul {
 
 .main-logo {
   background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.main-logo:hover {
+  background-color: #ca2c37;
+}
+
+.main-logo:active {
+  background-color: #ba2732;
 }
 
 .search {
@@ -42,37 +51,57 @@ header ul {
 }
 
 .search-text {
-  color: #ffffff;
   font-size: 17px;
   line-height: 18px;
   font-family: inherit;
+  color: #ffffff;
 }
 
-.full-cart {
+.user-actions a:active {
+  opacity: 0.6;
+}
+
+.not-empty {
   background-color: #ee3643;
+}
+
+.not-empty:hover {
+  background-color: #ca2c37;
+}
+
+.not-empty:active {
+  background-color: #ba2732;
 }
 
 .order {
   background-color: #63a63e;
 }
 
+.order:hover {
+  background-color: #5fbb2d;
+}
+
+.order:active {
+  background-color: #518534;
+}
+
 .site-description {
-  color: #ee3643;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
+  color: #ee3643;
 }
 
 header .address {
-  color: #32425c;
   font-size: 14px;
   line-height: 24px;
+  color: #32425c;
 }
 
 header .phone {
-  color: #ee3643;
   font-size: 21px;
   line-height: 21px;
+  color: #ee3643;
 }
 
 .account-area a {
@@ -82,11 +111,39 @@ header .phone {
   background-color: #ffffff;
 }
 
+.account-area a:not(.username):hover,
+.account-links a {
+  color: #ee3643;
+}
+
+.account-area a:active {
+  opacity: 0.3;
+}
+
+.username:active {
+  opacity: 0.3;
+}
+
 .account-links a {
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
+  color: #32425c;
   background-color: transparent;
+}
+
+.account-area a:active {
+  opacity: 0.3;
+}
+
+/*------------------ Навигация ------------------*/
+
+nav a:hover {
+  background-color: #293449;
+}
+
+nav a:active {
+  opacity: 0.5;
 }
 
 /*=================== Основной контент ===================*/
@@ -103,17 +160,184 @@ header .phone {
   line-height: 24px;
 }
 
+/*================== index ==================*/
+
 .btn {
-  color: #ffffff;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  color: #ffffff;
   background-color: #ee3643;
 }
 
 .list-item {
   font-size: 18px;
   line-height: 20px;
+}
+
+/*================= catalog =================*/
+
+h1 {
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+h2 {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs {
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs .home {
+  display: block;
+  width: 14px;
+  height: 12px;
+  background-image: url(../img/icon-home.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.sort {
+  background-color: #f7f3ec;
+}
+
+.sort ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sort a {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.sort-up,
+.sort-down {
+  display: block;
+  width: 10px;
+  height: 11px;
+}
+
+/*----------------- filter -----------------*/
+
+.filter {
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: solid 1px #e5e5e5;
+}
+
+input[type="checkbox"]:disabled + .manufacturer {
+  opacity: 0.4;
+}
+
+input[type="radio"]:disabled + .power {
+  opacity: 0.4;
+}
+
+/*----------------- items -----------------*/
+
+.items ul {
+  padding: 0;
+  list-style: none;
+}
+
+.item-card {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: bold;
+  /*text-align: center;*/
+}
+
+.item-options,
+.item-options button {
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.actual-price {
+  display: block;
+  padding: 10px 40px 16px 36px; 
+  width: 65px;
+  height: 12px;
+  color: #ffffff;
+  background-image: url(../img/item-button.svg);
+  background-repeat: no-repeat;
+}
+
+.price-bg {
+  /*background-color: #ef3341;*/
+}
+
+.buy-btn {
+  color: #ffffff;
+  background-color: #63a63e;
+  box-shadow: inset 0px -3px 0 0 #367315;
+}
+
+.buy-btn:hover {
+  background-color: #5fbb2d;
+}
+
+.buy-btn:active {
+  background-color: #518534;
+}
+
+.bookmark-btn {
+  color: #32425c;
+  background-color: #ffffff;
+  border: 3px solid #63a63e;
+}
+
+.bookmark-btn:hover {
+  border: 3px solid #32425c;
+}
+
+.bookmark-btn:active {
+  opacity: 0.3;
 }
 
 /*======================== Footer ========================*/
@@ -137,6 +361,14 @@ footer ul {
   color: #ffd180;
 }
 
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links a:active {
+  opacity: 0.5;
+}
+
 footer .address,
 footer .phone {
   color: #f3f7f9;
@@ -152,13 +384,36 @@ footer .phone {
   color: #ffffff;
 }
 
+/*------------------ Соцсети ------------------*/
+
 .social {
   display: block;
   width: 42px;
   height: 42px;
   background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   border-radius: 50%;
 }
+
+.social:hover,
+.social:active {
+  background-color: #ee3643;
+}
+
+.vk {
+  background-image: url(../img/vk-icon.svg);
+}
+
+.fb {
+  background-image: url(../img/fb-icon.svg);
+}
+
+.instagram {
+  background-image: url(../img/insta-icon.svg);
+}
+
+/*--------------- Обратная связь ---------------*/
 
 .feedback span {
   color: #ffffff;
@@ -166,6 +421,15 @@ footer .phone {
 
 .feedback a {
   color: #ffd180;
+}
+
+.feedback a:hover {
+  text-decoration: underline;
+}
+
+.feedback a:active {
+  text-decoration: none;
+  color: #ee3643;
 }
 
 /*=================== Прячущие классы ===================*/
