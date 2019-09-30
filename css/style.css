@@ -1,5 +1,8 @@
 body {
-  font-family: "Cuprum", "Arial", sans-serif;
+  /*font-family: "Cuprum", "Arial", sans-serif;*/
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
   color: #000000;
 }
 
@@ -10,6 +13,8 @@ a {
 /*====================== Header ======================*/
 
 header {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
   background-color: #f4f7f9;
 }
 
@@ -22,7 +27,9 @@ nav {
 }
 
 header a {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
+  font-weight: 400;
   line-height: 18px;
   color: #ffffff;
 }
@@ -50,15 +57,28 @@ header ul {
   border: none;
 }
 
+.search:hover,
+.user-actions a:hover {
+  background-color: #212a3a;
+}
+
+.search:focus {
+  background-color: #ffffff;
+  outline: none;
+}
+
 .search-text {
   font-size: 17px;
+  font-weight: 400;
   line-height: 18px;
   font-family: inherit;
   color: #ffffff;
 }
 
 .user-actions a:active {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #161d29;
 }
 
 .not-empty {
@@ -111,17 +131,13 @@ header .phone {
   background-color: #ffffff;
 }
 
-.account-area a:not(.username):hover,
-.account-links a {
+.login-option:hover,
+.account-links a:hover {
   color: #ee3643;
 }
 
 .account-area a:active {
-  opacity: 0.3;
-}
-
-.username:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .account-links a {
@@ -132,7 +148,8 @@ header .phone {
   background-color: transparent;
 }
 
-.account-area a:active {
+.account-links a:active {
+  color: #000000;
   opacity: 0.3;
 }
 
@@ -149,20 +166,17 @@ nav a:active {
 /*=================== Основной контент ===================*/
 
 .section-heading {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
+  font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
-}
-
-.plain-text {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 13px;
-  line-height: 24px;
 }
 
 /*================== index ==================*/
 
 .btn {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -171,6 +185,7 @@ nav a:active {
 }
 
 .list-item {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
 }
@@ -178,19 +193,12 @@ nav a:active {
 /*================= catalog =================*/
 
 h1 {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
-}
-
-h2 {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 18px;
-  text-transform: uppercase;
 }
 
 .breadcrumbs {
@@ -213,6 +221,13 @@ h2 {
   background-position: 50% 50%;
 }
 
+.catalog-section-heading {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
 .sort {
   background-color: #f7f3ec;
 }
@@ -223,7 +238,6 @@ h2 {
 }
 
 .sort a {
-  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -241,7 +255,6 @@ h2 {
 /*----------------- filter -----------------*/
 
 .filter {
-  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -250,7 +263,15 @@ fieldset {
 }
 
 .filter legend {
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.filter label {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 button[type="submit"] {
@@ -277,21 +298,24 @@ input[type="radio"]:disabled + .power {
 }
 
 .item-card {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   /*text-align: center;*/
 }
 
-.item-options,
-.item-options button {
+.item-options {
   font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
 .item-name {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 20px;
+}
+
+.price {
+  font-size: 17px;
+  line-height: 18px;
 }
 
 .old-price {
@@ -306,10 +330,6 @@ input[type="radio"]:disabled + .power {
   color: #ffffff;
   background-image: url(../img/item-button.svg);
   background-repeat: no-repeat;
-}
-
-.price-bg {
-  /*background-color: #ef3341;*/
 }
 
 .buy-btn {
@@ -343,6 +363,7 @@ input[type="radio"]:disabled + .power {
 /*======================== Footer ========================*/
 
 footer {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   background-color: #32425c;
@@ -351,6 +372,10 @@ footer {
 footer ul {
   padding: 0;
   list-style: none;
+}
+
+footer a {
+  font-family: "Cuprum", "Arial", sans-serif;
 }
 
 .company-links a {

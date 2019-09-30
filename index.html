@@ -13,7 +13,7 @@
     <section class="top-panel">
       <a class="main-logo"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
       <form action="" method="GET">
-        <span class="search-text">Поиск:</span><input class="search" id="search" type="search">
+        <label for="search" class="search-text">Поиск:</label><input class="search" id="search" type="search">
       </form>
       <ul class="user-actions">
         <li><a href="">Закладки: <span>0</span></a></li>
@@ -40,8 +40,8 @@
       </section>
       
       <section class="account-area">
-        <a href="">Войти</a>
-        <a href="">Регистрация</a>
+        <a class="login-option" href="">Войти</a>
+        <a class="login-option" href="">Регистрация</a>
       </section>
     </div>
 
@@ -285,10 +285,10 @@
       <section>
         <!-- Не уверена, какой здесь класс лучше задать h3, остановилась на этом. Если бы h2 и h3 совпадали по оформлению во всем документе, было бы несколько проще, а в текущем случае в голову приходит разве что вариант "section-heading" для более "крупных" и какой-нибудь вроде "subsection-heading" для меньших (как, например, "Популярные товары", "Доставка" и пр.). Может быть, есть вариант лучше? -->
         <h3 class="section-heading">Компания "Техномарт"</h3>
-        <p class="plain-text">
+        <p>
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
         </p>
-        <p class="plain-text">
+        <p>
           Мы можем доставить ваш товар в самые отдаленные точки России!
           Техномарт работает со многими транспортными компаниями:
         </p>
@@ -302,7 +302,7 @@
 
       <section>
         <h3 class="section-heading">Контакты</h3>
-        <p class="plain-text">
+        <p>
           Вы можете забрать товар сами,<br>
           заехав в наш офис:
         </p>
