@@ -228,7 +228,8 @@ h1 {
   text-transform: uppercase;
 }
 
-.sort {
+.sort,
+.filter-heading {
   background-color: #f7f3ec;
 }
 
@@ -252,6 +253,10 @@ h1 {
   height: 11px;
 }
 
+.sort-active {
+  color: #ee3643;
+}
+
 /*----------------- filter -----------------*/
 
 .filter {
@@ -272,6 +277,24 @@ fieldset {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
+}
+
+.price-range {
+  background-color: #f7f3ec;
+}
+
+.min-price,
+.max-price {
+  font-size: 17px;
+  line-height: 18px;
+  background-color: #f7f3ec;
+  border: none;
+}
+
+.price-range-dash {
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
 }
 
 button[type="submit"] {
