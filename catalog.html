@@ -98,18 +98,17 @@
     <h1>Перфораторы</h1>
 
     <form class="filter">
-      <h2 class="catalog-section-heading">Фильтр:</h2>
+      <h2 class="catalog-section-heading filter-heading">Фильтр:</h2>
       <fieldset>
         <legend>Цена:</legend>
-        <!-- Фильтр по цене -->
-        <p>
+        <p class="price-range">
           <span><!-- ползунок 1 --></span>
           <span><!-- ползунок 2 --></span>
         </p>
         <p>
-          <input id="min-price" type="text" name="min-price" value="0">
-          -
-          <input id="max-price" type="text" name="max-price" value="30000">
+          <input class="min-price" id="min-price" type="text" name="min-price" value="0">
+          <span class="price-range-dash">-</span>
+          <input class="max-price" id="max-price" type="text" name="max-price" value="30000">
         </p>
       </fieldset>
       <fieldset>
@@ -154,13 +153,13 @@
         <h2 class="catalog-section-heading">Сортировка:</h2>
         <ul>
           <li>
-            <a href="">По цене</a>
+            <a class="sort-by-price" href="">По цене</a>
           </li>
           <li>
-            <a href="">По типу</a>
+            <a class="sort-by-type" href="">По типу</a>
           </li>
           <li>
-            <a href="">По функционалу</a>
+            <a class="sort-by-functions" href="">По функционалу</a>
           </li>
         </ul> 
           
