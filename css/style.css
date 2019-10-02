@@ -233,6 +233,8 @@ h1 {
   background-color: #f7f3ec;
 }
 
+/*----------------- sort -----------------*/
+
 .sort ul {
   padding: 0;
   list-style: none;
@@ -242,19 +244,34 @@ h1 {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #ee3643;
 }
 
-.sort-up,
-.sort-down {
+.sort .sort-up,
+.sort .sort-down {
   display: block;
-  width: 10px;
-  height: 11px;
+  width: 0px;
+  height: 0px;
+  border: 11px solid #c5c5c5;
+  border-top: none;
+  border-right-width: 5px;
+  border-right-color: transparent;
+  border-left-width: 5px;
+  border-left-color: transparent;
 }
 
-.sort-active {
+.sort-down {
+  transform: rotate(180deg);
+}
+
+.sort .sort-arrow-active {
+  border-bottom-color: #ee3643;
+}
+
+.sort .sort-active {
   color: #ee3643;
+  border-bottom: none;
 }
 
 /*----------------- filter -----------------*/
@@ -263,7 +280,9 @@ h1 {
   text-transform: uppercase;
 }
 
-fieldset {
+.filter fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -280,7 +299,29 @@ fieldset {
 }
 
 .price-range {
+  position: relative;
+  padding: 39px 20px;
   background-color: #f7f3ec;
+}
+
+.range-line {
+  display: block;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.min-range-control,
+.max-range-control {
+  position: absolute;
+  top: 30px;
+  width: 20px;
+  height: 22px;
+  background: url(../img/filter-button.svg) 50% 50% no-repeat;
+  border-radius: 50%;
+}
+
+.max-range-control {
+  right: 20px;
 }
 
 .min-price,
@@ -382,6 +423,32 @@ input[type="radio"]:disabled + .power {
 
 .bookmark-btn:active {
   opacity: 0.3;
+}
+
+/*----------------- pages -----------------*/
+
+.pages a {
+  display: inline-block;
+  padding: 10px;
+  min-width: 38px;
+  width: auto;
+  height: 38px;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.pages .next-page {
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: 140px;
+}
+
+.pages .page-active {
+  color: #ffffff;
+  background-color: #ee3643;
 }
 
 /*======================== Footer ========================*/

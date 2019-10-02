@@ -102,8 +102,9 @@
       <fieldset>
         <legend>Цена:</legend>
         <p class="price-range">
-          <span><!-- ползунок 1 --></span>
-          <span><!-- ползунок 2 --></span>
+          <span class="min-range-control"><!-- ползунок 1 --></span>
+          <span class="range-line"></span>
+          <span class="max-range-control"><!-- ползунок 2 --></span>
         </p>
         <p>
           <input class="min-price" id="min-price" type="text" name="min-price" value="0">
@@ -153,7 +154,7 @@
         <h2 class="catalog-section-heading">Сортировка:</h2>
         <ul>
           <li>
-            <a class="sort-by-price" href="">По цене</a>
+            <a class="sort-by-price sort-active" href="">По цене</a>
           </li>
           <li>
             <a class="sort-by-type" href="">По типу</a>
@@ -166,7 +167,7 @@
         <ul>
           <li>
             <!-- Как обычно классы сортировочных элементов называют?.. -->
-            <a class="sort-up" href="">
+            <a class="sort-up sort-arrow-active" href="">
               <span class="visually-hidden">По возрастанию</span>
             </a>
           </li>
@@ -306,20 +307,20 @@
         </ul>
 
         <section>
-          <h3>Навигация по страницам</h3>
+          <h3 class="visually-hidden">Навигация по страницам</h3>
           <!-- Меня тут посетил вопрос... А навигацию по страницам случайно не надо делать ol? -->
-          <p>
-            <a><span>1</span></a>
+          <p class="pages">
+            <a class="page page-active"><span>1</span></a>
             <a href=""><span>2</span></a>
             <a href=""><span>3</span></a>
-            <a href=""><span>Следующая</span></a>
+            <a class="next-page" href=""><span>Следующая</span></a>
           </p>
         </section>
       </section>
 
       <section>
         <h2 class="section-heading">Пара слов о перфораторах</h2>
-        <p class="plain-text">
+        <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
