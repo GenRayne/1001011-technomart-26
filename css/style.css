@@ -173,7 +173,7 @@ nav a:active {
   text-transform: uppercase;
 }
 
-/*================== index ==================*/
+/*==================== index ====================*/
 
 .btn {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -190,7 +190,153 @@ nav a:active {
   line-height: 20px;
 }
 
-/*================= catalog =================*/
+.offers {
+  font-family: "Cuprum", "Arial", sans-serif;
+  color: #ffffff;
+}
+
+.offers a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+
+.offer-sm h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.offer-sm a {
+  display: inline-block;
+  padding: 10px;
+  min-width: 115px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offer-sm a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.offer-sm a:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.materials {
+  background-color: #ffbf47;
+}
+
+.instruments {
+  background-color: #3bbce3;
+}
+
+.machinery {
+  background-color: #dc91d8;
+}
+
+.discount {
+  background-color: #8ed78f;
+}
+
+.delivery {
+  background-color: #ffc047;
+}
+
+.slider {
+  background-color: #675B52;
+}
+
+.slider h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.slider p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.slider a {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #ee3643;
+}
+
+.slider a:hover {
+  background-color: #ca2c37;
+}
+
+.slider a:active {
+  background-color: #ba2732;
+}
+
+/*------------- Популярные -------------*/
+
+.popular-goods .subsection-heading,
+.popular-manufacturers .subsection-heading {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.popular-goods ul,
+.popular-manufacturers ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.all-btn {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+/*------------- Сервисы -------------*/
+
+.services {
+  background-color: #f4f7f9;
+}
+
+.tab {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #32425c;
+  border: none;
+}
+
+.tab:not(.tab-active):hover {
+  background-color: #293449;
+}
+
+.tab-active {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.services .subsection-heading {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+/*=================== catalog ===================*/
 
 h1 {
   font-family: "Cuprum", "Arial", sans-serif;
@@ -308,6 +454,7 @@ h1 {
   display: block;
   height: 2px;
   background-color: #d7dcde;
+  cursor: pointer;
 }
 
 .min-range-control,
@@ -318,6 +465,7 @@ h1 {
   height: 22px;
   background: url(../img/filter-button.svg) 50% 50% no-repeat;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .max-range-control {
@@ -326,8 +474,10 @@ h1 {
 
 .min-price,
 .max-price {
+  padding: 10px;
   font-size: 17px;
   line-height: 18px;
+  text-align: center;
   background-color: #f7f3ec;
   border: none;
 }
@@ -393,8 +543,8 @@ input[type="radio"]:disabled + .power {
   width: 65px;
   height: 12px;
   color: #ffffff;
-  background-image: url(../img/item-button.svg);
-  background-repeat: no-repeat;
+  background: url(../img/item-button.svg) no-repeat,
+              linear-gradient(to right, #EF3341 85%, transparent 85%);
 }
 
 .buy-btn {
@@ -438,6 +588,14 @@ input[type="radio"]:disabled + .power {
   text-align: center;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
+}
+
+.pages a:hover {
+  border: 1px solid #bdc6ca;
+}
+
+.pages a:active {
+  border: 1px solid #ee3643;
 }
 
 .pages .next-page {
