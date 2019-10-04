@@ -394,6 +394,15 @@ h1 {
   border-bottom: 1px dotted #ee3643;
 }
 
+.sort a:hover {
+  color: #000000;
+}
+
+.sort a.sort-up:hover:not(.sort-arrow-active),
+.sort a.sort-down:hover:not(.sort-arrow-active) {
+  border-bottom-color: #1E191A;
+}
+
 .sort .sort-up,
 .sort .sort-down {
   display: block;
@@ -411,11 +420,14 @@ h1 {
   transform: rotate(180deg);
 }
 
-.sort .sort-arrow-active {
+.sort .sort-arrow-active,
+.sort .sort-up:active,
+.sort .sort-down:active {
   border-bottom-color: #ee3643;
 }
 
-.sort .sort-active {
+.sort .sort-active,
+.sort a:active {
   color: #ee3643;
   border-bottom: none;
 }
@@ -595,6 +607,7 @@ input[type="radio"]:disabled + .power {
 }
 
 .pages a:active {
+  color: #000000;
   border: 1px solid #ee3643;
 }
 
