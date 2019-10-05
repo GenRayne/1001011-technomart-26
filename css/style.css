@@ -23,7 +23,7 @@ header {
 
 header .container {
   margin: auto;
-  width: 940px;
+  max-width: 940px;
 }
 
 header .top-panel {
@@ -36,7 +36,7 @@ header .top-panel-container {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
-  width: 940px;
+  max-width: 940px;
 }
 
 nav {
@@ -396,18 +396,6 @@ header .phone {
   border-radius: 50%;
 }
 
-.account-links a:last-child::after {
-  /*content: "";
-  display: block;
-  position: absolute;
-  top: 17px;
-  right: -2px;
-  width: 4px;
-  height: 4px;
-  background-color: red;
-  border-radius: 50%;*/
-}
-
 /*------------------ Навигация ------------------*/
 
 nav {
@@ -415,7 +403,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: auto;
-  width: 940px;
+  max-width: 940px;
 }
 
 nav a {
@@ -908,6 +896,7 @@ footer {
 
 footer ul {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -936,6 +925,7 @@ footer .footer-top {
 
 footer .company {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 20px;
@@ -953,6 +943,7 @@ footer .company {
 
 .contacts-and-offers {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
 }
@@ -983,6 +974,7 @@ footer .phone {
 
 .bottom-panel {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
@@ -998,6 +990,7 @@ footer .phone {
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social {
@@ -1035,10 +1028,15 @@ li:not(:last-child) .social {
 
 .feedback {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .feedback p:not(:last-child) {
   margin-right: 50px;
+}
+
+.feedback p:last-child {
+  margin-right: 15px;
 }
 
 .feedback span {
