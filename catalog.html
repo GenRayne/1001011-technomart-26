@@ -11,76 +11,84 @@
 <body>
   <header>
     <section class="top-panel">
-      <a class="main-logo" href="index.html"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
-      <form action="" method="GET">
-        <label for="search" class="search-text">Поиск:</label><input class="search" id="search" type="search">
-      </form>
-      <ul class="user-actions">
-        <li><a href="">Закладки: <span>0</span></a></li>
-        <li><a class="not-empty" href="">Корзина: <span>10</span></a></li>
-        <li><a class="order" href="">Оформить заказ</a></li>
-      </ul>
+      <div class="top-panel-container">
+        <a class="main-logo" href="index.html"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
+        <form action="" method="GET">
+          <input class="search" id="search" type="search">
+          <label for="search" class="search-text">Поиск:</label>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+            <path class="search-icon" fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+          </svg>
+        </form>
+        <ul class="user-actions">
+          <li><a class="bookmarks" href="">Закладки: <span>0</span></a></li>
+          <li><a class="cart not-empty" href="">Корзина: <span>10</span></a></li>
+          <li><a class="order" href="">Оформить заказ</a></li>
+        </ul>
+      </div>
     </section>
 
-    <div>
-      <p class="site-description">
-        Интернет-магазин<br>
-        строительных материалов<br>
-        и инструментов для ремонта
-      </p>
-
-      <section>
-        <a class="phone" href="tel:+78125550555">
-          +7 (812) 555-05-55
-        </a>
-
-        <span class="address">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </span>
-      </section>
-      
-      <section class="account-area">
-        <p>
-          <a class="username" href="">Равшан Джамшутович</a>
-          <a class="login-option" href=""><span class="visually-hidden">Выход</span></a>
+    <div class="container">
+      <div class="desc-contacts-account">
+        <p class="site-description">
+          Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
         </p>
 
-        <ul class="account-links">
+        <section class="contacts">
+          <a class="phone" href="tel:+78125550555">
+            +7 (812) 555-05-55
+          </a>
+
+          <span class="address">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          </span>
+        </section>
+        
+        <section class="account-area">
+          <div class="login-options">
+            <a class="username" href="">Равшан Джамшутович</a>
+            <a class="login-option log-out" href=""><span class="visually-hidden">Выход</span></a>
+          </div>
+
+          <ul class="account-links">
+            <li>
+              <a class="not-last" href="">Мои заказы</a>
+            </li>
+            <li>
+              <a href="">Личный кабинет</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <nav>
+        <ul>
           <li>
-            <a href="">Мои заказы</a>
+            <a href="index.html">Главная</a>
           </li>
           <li>
-            <a href="">Личный кабинет</a>
+            <a href="">Компания</a>
+          </li>
+          <li>
+            <a href="">Каталог</a>
+          </li>
+          <li>
+            <a href="">Новости</a>
+          </li>
+          <li>
+            <a href="">Спецпредложения</a>
+          </li>
+          <li>
+            <a href="">Доставка</a>
+          </li>
+          <li>
+            <a href="">Контакты</a>
           </li>
         </ul>
-      </section>
+      </nav>
     </div>
-
-    <nav>
-      <ul>
-        <li>
-          <a href="index.html">Главная</a>
-        </li>
-        <li>
-          <a href="">Компания</a>
-        </li>
-        <li>
-          <a href="">Каталог</a>
-        </li>
-        <li>
-          <a href="">Новости</a>
-        </li>
-        <li>
-          <a href="">Спецпредложения</a>
-        </li>
-        <li>
-          <a href="">Доставка</a>
-        </li>
-        <li>
-          <a href="">Контакты</a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
   <main>
@@ -166,7 +174,6 @@
           
         <ul>
           <li>
-            <!-- Как обычно классы сортировочных элементов называют?.. -->
             <a class="sort-up sort-arrow-active" href="">
               <span class="visually-hidden">По возрастанию</span>
             </a>
@@ -177,7 +184,6 @@
             </a>
           </li>
         </ul>
-        <!-- Все-таки разделила на 2 списка, глядя на предстоящее построение сетки -->
       </section>
       
       <section class="items">
@@ -188,8 +194,7 @@
             <section class="item-card">
               <img src="img/item-image-3000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 3000">
               <h3 class="item-name">Перфоратор BOSCH BFG 3000</h3>
-              <!-- А не имеет ли смысл старую цену сразу завернуть в <del> или <s>, чтобы при неподгрузке стилей все равно осталось зачеркивание? -->
-              <span class="price old-price">22500 Р.</span>
+              <s class="price old-price">22500 Р.</s>
               <span class="price actual-price">15500 Р.</span> 
             </section>
             <section class="item-options">
@@ -202,7 +207,7 @@
             <section class="item-card">
               <img src="img/item-image-6000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 6000">
               <h3 class="item-name">Перфоратор BOSCH BFG 6000</h3>
-              <span class="price old-price">30500 Р.</span>
+              <s class="price old-price">30500 Р.</s>
               <span class="price actual-price">25500 Р.</span>
             </section>
             <section class="item-options">
@@ -215,7 +220,7 @@
             <section class="item-card">
               <img src="img/item-image-2000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 2000">
               <h3 class="item-name">Перфоратор BOSCH BFG 2000</h3>
-              <span class="price old-price"></span>
+              <s class="price old-price"></s>
               <span class="price actual-price">12500 Р.</span>
             </section>
             <section class="item-options">
@@ -229,7 +234,7 @@
             <section class="item-card">
               <img src="img/item-image-3000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 3000">
               <h3 class="item-name">Перфоратор BOSCH BFG 3000</h3>
-              <span class="price old-price">22500 Р.</span>
+              <s class="price old-price">22500 Р.</s>
               <span class="price actual-price">15500 Р.</span>
             </section>
             <section class="item-options">
@@ -242,7 +247,7 @@
             <section class="item-card">
               <img src="img/item-image-6000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 6000">
               <h3 class="item-name">Перфоратор BOSCH BFG 6000</h3>
-              <span class="price old-price">30500 Р.</span>
+              <s class="price old-price">30500 Р.</s>
               <span class="price actual-price">25500 Р.</span>
             </section>
             <section class="item-options">
@@ -256,7 +261,7 @@
             <section class="item-card">
               <img src="img/item-image-2000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 2000">
               <h3 class="item-name">Перфоратор BOSCH BFG 2000</h3>
-              <span class="price old-price"></span>
+              <s class="price old-price"></s>
               <span class="price actual-price">12500 Р.</span>
             </section>
             <section class="item-options">
@@ -269,7 +274,7 @@
             <section class="item-card">
               <img src="img/item-image-3000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 3000">
               <h3 class="item-name">Перфоратор BOSCH BFG 3000</h3>
-              <span class="price old-price">22500 Р.</span>
+              <s class="price old-price">22500 Р.</s>
               <span class="price actual-price">15500 Р.</span>
             </section>
             <section class="item-options">
@@ -283,7 +288,7 @@
             <section class="item-card">
               <img src="img/item-image-6000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 6000">
               <h3 class="item-name">Перфоратор BOSCH BFG 6000</h3>
-              <span class="price old-price">30500 Р.</span>
+              <s class="price old-price">30500 Р.</s>
               <span class="price actual-price">25500 Р.</span>
             </section>
             <section class="item-options">
@@ -296,7 +301,7 @@
             <section class="item-card">
               <img src="img/item-image-2000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 2000">
               <h3 class="item-name">Перфоратор BOSCH BFG 2000</h3>
-              <span class="price old-price"></span>
+              <s class="price old-price"></s>
               <span class="price actual-price">12500 Р.</span>
             </section>
             <section class="item-options">
@@ -308,13 +313,20 @@
 
         <section>
           <h3 class="visually-hidden">Навигация по страницам</h3>
-          <!-- Меня тут посетил вопрос... А навигацию по страницам случайно не надо делать ol? -->
-          <p class="pages">
-            <a class="page page-active"><span>1</span></a>
-            <a href=""><span>2</span></a>
-            <a href=""><span>3</span></a>
-            <a class="next-page" href=""><span>Следующая</span></a>
-          </p>
+          <ol class="pages">
+            <li>
+              <a class="page page-active"><span>1</span></a>
+            </li>
+            <li>
+              <a href=""><span>2</span></a>
+            </li>
+            <li>
+              <a href=""><span>3</span></a>
+            </li>
+            <li>
+              <a class="next-page" href=""><span>Следующая</span></a>
+            </li>
+          <ol>
         </section>
       </section>
 

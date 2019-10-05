@@ -11,38 +11,48 @@
 <body>
   <header>
     <section class="top-panel">
-      <a class="main-logo"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
-      <form action="" method="GET">
-        <label for="search" class="search-text">Поиск:</label><input class="search" id="search" type="search">
-      </form>
-      <ul class="user-actions">
-        <li><a href="">Закладки: <span>0</span></a></li>
-        <li><a href="">Корзина: <span>0</span></a></li>
-        <li><a class="order" href="">Оформить заказ</a></li>
-      </ul>
+      <div class="top-panel-container">
+        <a class="main-logo"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
+        <form action="" method="GET">
+          <input class="search" id="search" type="search">
+          <label for="search" class="search-text">Поиск:</label>
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+            <path class="search-icon" fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+          </svg>
+        </form>
+        <ul class="user-actions">
+          <li><a class="bookmarks" href="">Закладки: <span>0</span></a></li>
+          <li><a class="cart" href="">Корзина: <span>0</span></a></li>
+          <li><a class="order" href="">Оформить заказ</a></li>
+        </ul>
+      </div>
     </section>
 
-    <div>
-      <p class="site-description">
-        Интернет-магазин<br>
-        строительных материалов<br>
-        и инструментов для ремонта
-      </p>
+    <div class="container">
+      <div class="desc-contacts-account">
+        <p class="site-description">
+          Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
+        </p>
 
-      <section>
-        <a class="phone" href="tel:+78125550555">
-          +7 (812) 555-05-55
-        </a>
+        <section class="contacts">
+          <a class="phone" href="tel:+78125550555">
+            +7 (812) 555-05-55
+          </a>
 
-        <span class="address">
-          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-        </span>
-      </section>
-      
-      <section class="account-area">
-        <a class="login-option" href="">Войти</a>
-        <a class="login-option" href="">Регистрация</a>
-      </section>
+          <span class="address">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          </span>
+        </section>
+        
+        <section class="account-area">
+          <div class="login-options">
+            <a class="login-option log-in" href="">Войти</a>
+            <a class="login-option" href="">Регистрация</a>
+          </div>
+        </section>
+      </div>
     </div>
 
     <nav>
@@ -70,6 +80,7 @@
         </li>
       </ul>
     </nav>
+    
   </header>
   
   <main>
@@ -133,8 +144,8 @@
             <section class="item-card">
               <img src="img/item-image-9000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 9000">
               <h2 class="item-name">Перфоратор BOSCH BFG 9000</h2>
-              <span class="price old-price">32500 Р.</span> <!-- Старая цена -->
-              <span class="price actual-price">25500 Р.</span> <!-- Текущая цена -->
+              <s class="price old-price">32500 Р.</s>
+              <span class="price actual-price">25500 Р.</span>
             </section>
             <section class="item-options">
               <a class="btn buy-btn" href="">Купить</a>
@@ -146,8 +157,8 @@
             <section class="item-card">
               <img src="img/item-image-3000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 3000">
               <h2 class="item-name">Перфоратор BOSCH BFG 3000</h2>
-              <span class="price old-price">22500 Р.</span> <!-- Старая цена -->
-              <span class="price actual-price">15500 Р.</span> <!-- Текущая цена -->
+              <s class="price old-price">22500 Р.</s>
+              <span class="price actual-price">15500 Р.</span>
             </section>
             <section class="item-options">
               <a class="btn buy-btn" href="">Купить</a>
@@ -159,8 +170,8 @@
             <section class="item-card">
               <img src="img/item-image-6000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 6000">
               <h2 class="item-name">Перфоратор BOSCH BFG 6000</h2>
-              <span class="price old-price">30500</span> <!-- Старая цена -->
-              <span class="price actual-price">25500 Р.</span> <!-- Текущая цена -->
+              <s class="price old-price">30500</s>
+              <span class="price actual-price">25500 Р.</span>
             </section>
             <section class="item-options">
               <a class="btn buy-btn" href="">Купить</a>
@@ -172,8 +183,8 @@
             <section class="item-card">
               <img src="img/item-image-2000.jpg" width="218" height="170" alt="Фото товара Перфоратор BOSCH BFG 2000">
               <h2 class="item-name">Перфоратор BOSCH BFG 2000</h2>
-              <span class="price old-price"></span> <!-- Старая цена -->
-              <span class="price actual-price">12500 Р.</span> <!-- Текущая цена -->
+              <s class="price old-price"></s>
+              <span class="price actual-price">12500 Р.</span>
             </section>
             <section class="item-options">
               <a class="btn buy-btn" href="">Купить</a>
@@ -284,7 +295,6 @@
     <section>
       <h2 class="visually-hidden">О компании</h2>
       <section>
-        <!-- Не уверена, какой здесь класс лучше задать h3, остановилась на этом. Если бы h2 и h3 совпадали по оформлению во всем документе, было бы несколько проще, а в текущем случае в голову приходит разве что вариант "section-heading" для более "крупных" и какой-нибудь вроде "subsection-heading" для меньших (как, например, "Популярные товары", "Доставка" и пр.). Может быть, есть вариант лучше? -->
         <h3 class="section-heading">Компания "Техномарт"</h3>
         <p>
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
