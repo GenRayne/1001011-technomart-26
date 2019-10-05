@@ -434,18 +434,16 @@ nav a:active {
 /*==================== index ====================*/
 
 .btn {
+  display: block;
+  padding: 11px 10px 9px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #ee3643;
-}
-
-.list-item {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 20px;
+  border-radius: 3px;
 }
 
 .offers {
@@ -564,7 +562,17 @@ nav a:active {
 /*------------- Сервисы -------------*/
 
 .services {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 56px;
+  /*max-width: 940px;*/
   background-color: #f4f7f9;
+}
+
+.services ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .tab {
@@ -592,6 +600,47 @@ nav a:active {
   line-height: 36px;
   text-transform: uppercase;
   color: #32425c;
+}
+
+/*------------- О компании -------------*/
+
+main .about {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 86px;
+  max-width: 940px;
+}
+
+.about p {
+  margin-bottom: 30px;
+}
+
+.technomart-company {
+  max-width: 520px;
+}
+
+.technomart-company .btn {
+  display: inline-block;
+  min-width: 220px;
+}
+
+.list-item {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.list-item:last-child {
+  margin-bottom: 40px;
+}
+
+.map-pic {
+  margin-bottom: 40px;
 }
 
 /*=================== catalog ===================*/
