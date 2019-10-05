@@ -67,9 +67,9 @@ header ul {
 
 .main-logo {
   flex-shrink: 0;
-  padding: 13px 10px 17px;
+  padding: 12px 10px 7px;
   width: 220px;
-  height: 42px;
+  min-height: 42px;
   text-align: center;
   background-color: #ee3643;
   box-shadow: 0px 5px 0 0 #B62430;
@@ -907,6 +907,8 @@ footer {
 }
 
 footer ul {
+  display: flex;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -915,8 +917,44 @@ footer a {
   font-family: "Cuprum", "Arial", sans-serif;
 }
 
+/*------------------ top panel ------------------*/
+
+footer .footer-top {
+  margin: 0 auto;
+  max-width: 940px;
+}
+
+.footer-main-logo {
+  padding: 20px 41px 12px;
+}
+
+.footer-main-logo img {
+  margin: auto;
+  width: 138px;
+  height: 23px;
+}
+
+footer .company {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.company-links a,
+.offers-links a {
+  margin-left: 40px;
+  padding: 10px;
+}
+
 .company-links a {
   color: #f1f5f7;
+}
+
+.contacts-and-offers {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .offers-links a {
@@ -933,20 +971,34 @@ footer a {
 
 footer .address,
 footer .phone {
+  display: block;
   color: #f3f7f9;
 }
 
+/*------------------ bottom panel ------------------*/
+
+.bottom-bg-wrapper {
+  background-color: #293449;
+}
+
 .bottom-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 17px 0 16px;
+  max-width: 940px;
   font-size: 16px;
   line-height: 18px;
-  background-color: #293449;
 }
 
 .copyright {
   color: #ffffff;
 }
 
-/*------------------ Соцсети ------------------*/
+.socials {
+  display: flex;
+}
 
 .social {
   display: block;
@@ -956,6 +1008,10 @@ footer .phone {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border-radius: 50%;
+}
+
+li:not(:last-child) .social {
+  margin-right: 3px;
 }
 
 .social:hover,
@@ -976,6 +1032,14 @@ footer .phone {
 }
 
 /*--------------- Обратная связь ---------------*/
+
+.feedback {
+  display: flex;
+}
+
+.feedback p:not(:last-child) {
+  margin-right: 50px;
+}
 
 .feedback span {
   color: #ffffff;
