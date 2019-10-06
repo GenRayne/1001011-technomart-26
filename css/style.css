@@ -154,15 +154,15 @@ header ul {
   background-color: #161d29;
 }
 
-.not-empty {
+.user-actions .not-empty {
   background-color: #ee3643;
 }
 
-.not-empty:hover {
+.user-actions .not-empty:hover {
   background-color: #ca2c37;
 }
 
-.not-empty:active {
+.user-actions .not-empty:active {
   background-color: #ba2732;
 }
 
@@ -200,26 +200,27 @@ header ul {
   opacity: 0.5;
 }
 
-.order {
+.user-actions .order {
   text-align: center;
   background-color: #63a63e;
 }
 
-.order:hover {
+.user-actions .order:hover {
   background-color: #5fbb2d;
 }
 
-.order:active {
+.user-actions .order:active {
   background-color: #518534;
 }
 
 /*------------------ Разное ------------------*/
 
 .desc-contacts-account {
-  margin-bottom: 33px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 33px;
+  min-height: 77px;
 }
 
 .site-description {
@@ -271,7 +272,7 @@ header .phone {
 
 .login-options a {
   display: block;
-  padding: 12px 25px 9px;
+  padding: 12px 25px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -371,7 +372,7 @@ header .phone {
 .account-links a {
   display: block;
   position: relative;
-  padding: 10px 17px;
+  padding: 7px 17px;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
@@ -388,7 +389,7 @@ header .phone {
   content: "";
   display: block;
   position: absolute;
-  top: 17px;
+  top: 15px;
   right: -2px;
   width: 4px;
   height: 4px;
@@ -454,9 +455,25 @@ nav a:active {
   background-color: #ba2732;  
 }
 
+.main-content-wrapper {
+  margin: 60px auto 0;
+  max-width: 940px;
+}
+
 .offers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 33px;
   font-family: "Cuprum", "Arial", sans-serif;
   color: #ffffff;
+}
+
+.offers ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .offers a {
@@ -464,9 +481,36 @@ nav a:active {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
+  border-radius: 3px;
+}
+
+.offer-sm {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 22px 23px 22px;
+  width: 300px;
+  min-height: 123px;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-position: 83% 50%;
+}
+
+.offer-sm.new::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/new-flag.png);
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .offer-sm h3 {
+  margin: 0;
+  margin-bottom: 11px;
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -489,31 +533,55 @@ nav a:active {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.offers-after-lg {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
 .materials {
   background-color: #ffbf47;
+  background-image: url(../img/icon-1.svg);
 }
 
 .instruments {
   background-color: #3bbce3;
+  background-image: url(../img/icon-2.svg);
+  background-position: 87% 50%;
 }
 
 .machinery {
   background-color: #dc91d8;
+  background-image: url(../img/icon-3.svg);
+  background-position: 87% 50%;
 }
 
 .discount {
   background-color: #8ed78f;
+  background-image: url(../img/icon-4.svg);
 }
 
 .delivery {
   background-color: #ffc047;
+  background-image: url(../img/icon-5.svg);
+  background-position: 85% 50%;
+}
+
+/*------------- Слайдер -------------*/
+
+.offer-lg {
+  width: 620px;
 }
 
 .slider {
+  position: relative;
   background-color: #675B52;
 }
 
 .slider h3 {
+  margin: 0 0 5px;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -521,34 +589,56 @@ nav a:active {
 }
 
 .slider p {
+  margin: 0;
   font-size: 18px;
   line-height: 24px;
 }
 
-.slider a {
-  font-size: 14px;
-  line-height: 18px;
-  background-color: #ee3643;
+.slide {
+  display: none;
+  position: absolute;
+  padding: 27px 24px;
+  min-width: 620px;
+  min-height: 266px;
 }
 
-.slider a:hover {
-  background-color: #ca2c37;
+.slide-drills {
+  background-image: url(../img/slide-image-1.jpg);
 }
 
-.slider a:active {
-  background-color: #ba2732;
+.slide-hammer-drills {
+  background-image: url(../img/slide-image-2.jpg);
+}
+
+.go-to-catalog {
+  position: absolute;
+  left: 25px;
+  bottom: 22px;
+  min-width: 195px;
+}
+
+.slide-active {
+  display: block;
 }
 
 /*------------- Популярные -------------*/
 
+.popular-goods,
+.popular-manufacturers {
+  position: relative;
+}
+
 .popular-goods .subsection-heading,
 .popular-manufacturers .subsection-heading {
+  margin: 0 0 20px;
+  padding: 30px 30px 29px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   font-weight: 400;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
+  background-color: #f9f5f0;
 }
 
 .popular-goods ul,
@@ -559,6 +649,9 @@ nav a:active {
 }
 
 .all-btn {
+  position: absolute;
+  top: 25px;
+  right: 24px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -567,14 +660,36 @@ nav a:active {
   background-color: #ee3643;
 }
 
+.popular-manufacturers .manufacturers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popular-manufacturers li {
+  display: flex;
+  margin-bottom: 20px;
+  min-width: 220px;
+  min-height: 145px;
+  border: 1px solid #eaeaea;
+}
+
+.popular-manufacturers a {
+  display: block;
+  margin: auto;
+}
+
 /*------------- Сервисы -------------*/
 
+.services-bg-wrapper {
+  background-color: #f4f7f9;  
+}
+
 .services {
-  display: flex;
   justify-content: space-between;
-  margin: 0 auto 56px;
-  /*max-width: 940px;*/
-  background-color: #f4f7f9;
+  margin: 65px auto 56px;
+  padding: 40px 0 0; /* 54px */
+  max-width: 940px;
 }
 
 .services ul {
@@ -583,13 +698,52 @@ nav a:active {
   list-style: none;
 }
 
+.services p {
+  line-height: 24px;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  /*padding: 74px 0 46px;*/
+  padding: 74px 0 0;
+}
+
+.services .tabs {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 80px;
+  padding-bottom: 100px;
+}
+
+.tabs:after {
+  content: "";
+  position: absolute;
+  top: -46px;
+  right: 0;
+  display: block;
+  width: 10px;
+  height: 279px;
+  background-image: url(../img/shadow.png);
+  background-repeat: no-repeat;
+}
+
 .tab {
+  padding: 15px 22px;
+  min-width: 240px;
   font-size: 21px;
   font-weight: 700;
   line-height: 30px;
+  text-align: left;
   color: #ffffff;
   background-color: #32425c;
   border: none;
+}
+
+.tab:not(.tab-active) {
+  box-shadow: 0px 1px 0 0 #293449,
+              inset 0px 1px 0 0 #405069;
 }
 
 .tab:not(.tab-active):hover {
@@ -601,13 +755,54 @@ nav a:active {
   background-color: #ffffff;
 }
 
+.services-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+.services-container section {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.about-delivery {
+  background-image: url(../img/delivery.png);
+}
+
+.about-guarantee {
+  background-image: url(../img/guarantee.png);
+}
+
+.about-credit {
+  background-image: url(../img/credit.png);
+}
+
+.services-container .btn {
+  margin-top: 31px;
+  min-width: 195px;
+}
+
 .services .subsection-heading {
+  margin: 0;
+  margin-bottom: 28px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   text-transform: uppercase;
   color: #32425c;
+}
+
+.services-container .service-active {
+  display: block;
+}
+
+.services .get-credit {
+  max-width: 195px;
 }
 
 /*------------- О компании -------------*/
@@ -623,6 +818,11 @@ main .about {
   margin-bottom: 30px;
 }
 
+.about ul {
+  margin: 0;
+  padding: 0;
+}
+
 .technomart-company {
   max-width: 520px;
 }
@@ -632,18 +832,32 @@ main .about {
   min-width: 220px;
 }
 
-.list-item {
+.about li {
+  position: relative;
+  padding-left: 36px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
+  list-style: none;
 }
 
-.list-item:not(:last-child) {
+.about li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+}
+
+.about li:not(:last-child) {
   margin-bottom: 24px;
 }
 
-.list-item:last-child {
+.about li:last-child {
   margin-bottom: 40px;
 }
 
@@ -810,6 +1024,7 @@ h1 {
 /*----------------- filter -----------------*/
 
 .filter {
+  margin-right: 20px;
   width: 220px;
   text-transform: uppercase;
 }
@@ -1099,6 +1314,7 @@ button[type="submit"] {
 
 .bookmark-btn:hover {
   border: 3px solid #32425c;
+  background-color: #ffffff;
 }
 
 .bookmark-btn:active {
