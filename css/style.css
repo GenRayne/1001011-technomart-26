@@ -668,6 +668,7 @@ nav a:active {
 
 .popular-manufacturers li {
   display: flex;
+  align-items: center;
   margin-bottom: 20px;
   min-width: 220px;
   min-height: 145px;
@@ -675,7 +676,6 @@ nav a:active {
 }
 
 .popular-manufacturers a {
-  display: block;
   margin: auto;
 }
 
@@ -810,6 +810,7 @@ nav a:active {
 main .about {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 0 auto 86px;
   max-width: 940px;
 }
