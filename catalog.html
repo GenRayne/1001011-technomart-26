@@ -159,7 +159,7 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="apply-filter" type="submit">Показать</button>
       </form>
 
       <section class="items-related">
@@ -371,7 +371,7 @@
   <footer>
     <section class="footer-top">
       <div class="company">
-        <a class="main-logo footer-main-logo"><img src="img/logo.svg" width="109" height="19" alt="Логотип магазина Техномарт"></a>
+        <a class="main-logo footer-main-logo"><img src="img/logo.svg" width="138" height="23" alt="Логотип магазина Техномарт"></a>
         <ul class="links company-links">
           <li>
             <a href="">Компания</a>
@@ -457,13 +457,15 @@
       </section>
     </div>
   </footer>
-
-  <section class="modal hidden">
-    <button type="button"><!-- Кнопка "Закрыть" --></button>
-    <p>Товар добавлен в корзину!</p>
-    <div>
-      <a href="">Оформить заказ</a>
-      <a href="catalog.html">Продолжить покупки</a>
+  
+  <section class="modal added-to-cart"> <!-- hidden -->
+    <button class="close-btn" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <p class="main-text">Товар добавлен в корзину!</p>
+    <div class="modal-buttons">
+      <a class="btn order-btn" href="">Оформить заказ</a>
+      <a class="btn continue-shopping-btn" href="catalog.html">Продолжить покупки</a>
     </div>
   </section>
 </body>
