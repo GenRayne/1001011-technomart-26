@@ -23,7 +23,7 @@ header {
 
 header .container {
   margin: auto;
-  max-width: 940px;
+  width: 940px;
 }
 
 header .top-panel {
@@ -36,7 +36,7 @@ header .top-panel-container {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
-  max-width: 940px;
+  width: 940px;
 }
 
 nav {
@@ -404,7 +404,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-around;
   margin: auto;
-  max-width: 940px;
+  width: 940px;
 }
 
 nav a {
@@ -459,7 +459,7 @@ nav a:active {
 
 .main-content-wrapper {
   margin: 60px auto 0;
-  max-width: 940px;
+  width: 940px;
 }
 
 .offers {
@@ -765,7 +765,7 @@ nav a:active {
   justify-content: space-between;
   margin: 65px auto 56px;
   padding: 40px 0 0; /* 54px */
-  max-width: 940px;
+  width: 940px;
 }
 
 .services ul {
@@ -888,7 +888,7 @@ main .about {
   justify-content: space-between;
   align-items: flex-start;
   margin: 0 auto 86px;
-  max-width: 940px;
+  width: 940px;
 }
 
 .about p {
@@ -957,7 +957,7 @@ h1 {
 .catalog-h1 {
   margin: 0 auto 20px;
   padding: 30px 30px 29px;
-  max-width: 940px;
+  width: 940px;
   background-color: #f2f6f8;
 }
 
@@ -965,7 +965,7 @@ h1 {
   display: flex;
   margin: 23px auto;
   padding: 0;
-  max-width: 940px;
+  width: 940px;
   list-style: none;
 }
 
@@ -1002,7 +1002,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 940px;
+  width: 940px;
 }
 
 .items-related {
@@ -1450,7 +1450,7 @@ ol.pages {
 
 .general-description {
   margin: 0 auto;
-  max-width: 940px;
+  width: 940px;
 }
 
 .general-description p {
@@ -1483,7 +1483,7 @@ footer a {
 footer .footer-top {
   margin: 0 auto;
   margin-bottom: 35px;
-  max-width: 940px;
+  width: 940px;
 }
 
 .footer-main-logo {
@@ -1552,7 +1552,7 @@ footer .phone {
   justify-content: space-between;
   margin: 0 auto;
   padding: 17px 0 16px;
-  max-width: 940px;
+  width: 940px;
   font-size: 16px;
   line-height: 18px;
 }
