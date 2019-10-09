@@ -577,6 +577,7 @@ nav a:active {
 
 .offer-lg {
   width: 620px;
+  height: 266px;
 }
 
 .slider {
@@ -623,6 +624,63 @@ nav a:active {
 
 .slide-active {
   display: block;
+}
+
+.slider-controls {
+  position: relative;
+  height: 100%;
+}
+
+.slider-controls .arr {
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 22px;
+  height: 40px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.slider-controls .arr-back {
+  left: 25px;
+  background-image: url(../img/arr-left.svg);
+}
+
+.slider-controls .arr-forward {
+  right: 20px;
+  background-image: url(../img/arr-right.svg);
+}
+
+.slider-dots {
+  position: absolute;
+  left: calc(50% - 16px);
+  bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 32px;
+}
+
+.slide-dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.slide-dot:not(:last-child) {
+  margin-right: 12px;
+}
+
+.slide-dot:not(.dot-active) {
+  cursor: pointer;
+}
+
+.dot-active {
+  width: 10.5px;
+  height: 10.5px;
+  background-color: #ee3643;
+  border: 2px solid #ffffff;
+  /*box-shadow: inset 0 0 0 1.5px #ffffff;*/
 }
 
 /*------------- Популярные -------------*/
