@@ -1,6 +1,7 @@
+try {
+
 // Модальное окно с картой
 
-try {
   var mapPicBtn = document.querySelector('.map-link'),
       mapModal = document.querySelector('.map-modal'),
       closeMap = mapModal.querySelector('.close-btn');
@@ -14,13 +15,9 @@ try {
     ev.preventDefault();
     mapModal.classList.add('hidden');
   });
-} catch (err) {
-  console.log(err);
-}
 
 // Модальное окно "Напишите нам"
 
-try {
   var writeBtn = document.querySelector('.write-us-btn'),
       writeModal = document.querySelector('.write-us-modal'),
       closeMessage = writeModal.querySelector('.close-btn');
@@ -38,10 +35,11 @@ try {
   console.log(err);
 }
 
+try {
+
 // Модальное окно "Товар добавлен в корзину"
 
-try {
-  var butBtns = document.querySelectorAll(".buy-btn"),
+  var buyBtns = document.querySelectorAll(".buy-btn"),
       addedToCartModal = document.querySelector(".added-to-cart"),
       closeAddedToCart = addedToCartModal.querySelector(".close-btn");
 
@@ -49,6 +47,13 @@ try {
     ev.preventDefault();
     addedToCartModal.classList.add('hidden');
   });
+
+  for (var btn of buyBtns) {
+    btn.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      addedToCartModal.classList.remove('hidden');
+    });
+  }
 } catch (err) {
   console.log(err);
 }
