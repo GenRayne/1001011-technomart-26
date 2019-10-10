@@ -1803,7 +1803,7 @@ li:not(:last-child) .social {
 
 @keyframes slide-from-left {
   0% {
-    transform: translateX(-200%);
+    transform: translateX(-150vw);
   }
   100% {
     transform: translateX(0%);
@@ -1815,7 +1815,7 @@ li:not(:last-child) .social {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(200%);
+    transform: translateX(150vw);
   }
 }
 

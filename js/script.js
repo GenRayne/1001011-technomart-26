@@ -9,12 +9,12 @@ try {
   mapPicBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
 
-    if (!writeModal.classList.contains('hidden')) {
+    if (!writeModal.classList.contains('hidden') || !addedToCartModal.classList.contains('hidden')) {
       closeModal(writeModal);
+      closeModal(addedToCartModal);
     }
 
     openModal(mapModal);
-    // mapModal.classList.remove('hidden');
   });
 
   closeMapBtn.addEventListener('click', function (ev) {
@@ -31,25 +31,18 @@ try {
   writeBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
 
-    if (!mapModal.classList.contains('hidden')) {
+    if (!mapModal.classList.contains('hidden') || !addedToCartModal.classList.contains('hidden')) {
       closeModal(mapModal);
+      closeModal(addedToCartModal);
     }
 
     openModal(writeModal);
-    // writeModal.classList.remove('hidden');
-    // writeModal.classList.add('slide-in');
   });
 
   closeMessageBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
     closeModal(writeModal);
   });
-
-} catch (err) {
-  console.log(err);
-}
-
-try {
 
 // Модальное окно "Товар добавлен в корзину"
 
@@ -61,19 +54,27 @@ try {
   for (var btn of buyBtns) {
     btn.addEventListener('click', function (ev) {
       ev.preventDefault();
-      addedToCartModal.classList.remove('hidden');
+
+      if (!mapModal.classList.contains('hidden') || !writeModal.classList.contains('hidden')) {
+        closeModal(mapModal);
+        closeModal(writeModal);
+      }
+
+      openModal(addedToCartModal);
     });
   }
 
   closeAddedToCartBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-    addedToCartModal.classList.add('hidden');
+
+    closeModal(addedToCartModal);
   });
 
   continueBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-    addedToCartModal.classList.add('hidden');
+    closeModal(addedToCartModal);
   });
+  
 } catch (err) {
   console.log(err);
 }
@@ -89,5 +90,5 @@ function closeModal (modal) {
   setTimeout(function() {
     modal.classList.remove('slide-out');
     modal.classList.add('hidden');
-  }, 800);
+  }, 600);
 }
