@@ -4,33 +4,47 @@ try {
 
   var mapPicBtn = document.querySelector('.map-link'),
       mapModal = document.querySelector('.map-modal'),
-      closeMap = mapModal.querySelector('.close-btn');
+      closeMapBtn = mapModal.querySelector('.close-btn');
 
   mapPicBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-    mapModal.classList.remove('hidden');
+
+    if (!writeModal.classList.contains('hidden')) {
+      closeModal(writeModal);
+    }
+
+    openModal(mapModal);
+    // mapModal.classList.remove('hidden');
   });
 
-  closeMap.addEventListener('click', function (ev) {
+  closeMapBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-    mapModal.classList.add('hidden');
+    closeModal(mapModal);
   });
 
 // Модальное окно "Напишите нам"
 
   var writeBtn = document.querySelector('.write-us-btn'),
       writeModal = document.querySelector('.write-us-modal'),
-      closeMessage = writeModal.querySelector('.close-btn');
+      closeMessageBtn = writeModal.querySelector('.close-btn');
 
   writeBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-    writeModal.classList.remove('hidden');
+
+    if (!mapModal.classList.contains('hidden')) {
+      closeModal(mapModal);
+    }
+
+    openModal(writeModal);
+    // writeModal.classList.remove('hidden');
+    // writeModal.classList.add('slide-in');
   });
 
-  closeMessage.addEventListener('click', function (ev) {
+  closeMessageBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-    writeModal.classList.add('hidden');
+    closeModal(writeModal);
   });
+
 } catch (err) {
   console.log(err);
 }
@@ -41,12 +55,8 @@ try {
 
   var buyBtns = document.querySelectorAll(".buy-btn"),
       addedToCartModal = document.querySelector(".added-to-cart"),
-      closeAddedToCart = addedToCartModal.querySelector(".close-btn");
-
-  closeAddedToCart.addEventListener('click', function (ev) {
-    ev.preventDefault();
-    addedToCartModal.classList.add('hidden');
-  });
+      closeAddedToCartBtn = addedToCartModal.querySelector(".close-btn"),
+      continueBtn = addedToCartModal.querySelector(".continue-shopping-btn");
 
   for (var btn of buyBtns) {
     btn.addEventListener('click', function (ev) {
@@ -54,6 +64,30 @@ try {
       addedToCartModal.classList.remove('hidden');
     });
   }
+
+  closeAddedToCartBtn.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    addedToCartModal.classList.add('hidden');
+  });
+
+  continueBtn.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    addedToCartModal.classList.add('hidden');
+  });
 } catch (err) {
   console.log(err);
+}
+
+function openModal (modal) {
+  modal.classList.remove('hidden');
+  modal.classList.add('slide-in');
+}
+
+function closeModal (modal) {
+  modal.classList.remove('slide-in');
+  modal.classList.add('slide-out');
+  setTimeout(function() {
+    modal.classList.remove('slide-out');
+    modal.classList.add('hidden');
+  }, 800);
 }

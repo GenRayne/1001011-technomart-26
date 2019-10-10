@@ -1793,6 +1793,32 @@ li:not(:last-child) .social {
   z-index: 60;
 }
 
+.slide-in {
+  animation: slide-from-left 0.5s both;
+}
+
+.slide-out {
+  animation: slide-to-right 0.5s both;
+}
+
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-to-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
 /*=================== Прячущие классы ===================*/
 
 .hidden {
