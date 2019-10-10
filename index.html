@@ -107,34 +107,39 @@
         </article>
 
         <article class="offer-lg slider">
-          <ul>
-            <li class="slide slide-drills slide-active">
-              <h3>Дрели</h3>
-              <p>Соседям на радость</p>
-            </li>
-            <li class="slide slide-hammer-drills">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-            </li>
-          </ul>
+          <h3 class="visually-hidden">Главные предложения</h2>
+          <input class="visually-hidden" type="radio" id="offer-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="offer-2" name="toggle">
 
-          <section class="slider-controls">
+          <section class="slider-controls-dots">
+              <label class="slide-dot slide-dot-1" for="offer-1">
+                <span class="visually-hidden">Первый слайд</span>
+              </label>
+              <label class="slide-dot slide-dot-2" for="offer-2">
+                <span class="visually-hidden">Второй слайд</span>
+              </label>
+          </section>
+          <section class="slider-controls-arrows">
             <div class="arr arr-back">
               <span class="visually-hidden">Назад</span>
             </div>
             <div class="arr arr-forward">
               <span class="visually-hidden">Вперед</span>
             </div>
-            <div class="slider-dots">
-              <span class="slide-dot dot-active">
-                <span class="visually-hidden">Первый слайд</span>
-              </span>
-              <span class="slide-dot">
-                <span class="visually-hidden">Второй слайд</span>
-              </span>
-            </div>
-            <a class="btn go-to-catalog" href="catalog.html">Открыть каталог</a>
           </section>
+
+          <ul class="slides">
+            <li class="slide slide-drills slide-active">
+              <h3>Дрели</h3>
+              <p>Соседям на радость</p>
+              <a class="btn go-to-catalog" href="catalog.html">Открыть каталог</a>
+            </li>
+            <li class="slide slide-hammer-drills">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <a class="btn go-to-catalog" href="catalog.html">Открыть каталог</a>
+            </li>
+          </ul>
         </article>
 
         <div class="offers-after-lg">

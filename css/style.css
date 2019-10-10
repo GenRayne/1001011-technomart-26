@@ -626,12 +626,14 @@ nav a:active {
   display: block;
 }
 
-.slider-controls {
-  position: relative;
-  height: 100%;
+.slider-controls-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 100;
 }
 
-.slider-controls .arr {
+.slider-controls-arrows .arr {
   position: absolute;
   top: calc(50% - 20px);
   width: 22px;
@@ -640,46 +642,64 @@ nav a:active {
   cursor: pointer;
 }
 
-.slider-controls .arr-back {
+.slider-controls-arrows .arr-back {
   left: 25px;
   background-image: url(../img/arr-left.svg);
 }
 
-.slider-controls .arr-forward {
+.slider-controls-arrows .arr-forward {
   right: 20px;
   background-image: url(../img/arr-right.svg);
 }
 
-.slider-dots {
+.slider-controls-dots {
   position: absolute;
   left: calc(50% - 16px);
   bottom: 40px;
   display: flex;
   justify-content: space-between;
   width: 32px;
+  z-index: 100;
 }
 
 .slide-dot {
   display: block;
+  position: relative;
   width: 10px;
   height: 10px;
   background-color: #ffffff;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls-dots .slide-dot::after {
+  display: none;
+}
+
+#offer-1:checked ~ .slider-controls-dots .slide-dot::after,
+#offer-2:checked ~ .slider-controls-dots .slide-dot::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background-color: #ee3643;
+  border-radius: 50%;
+}
+
+#offer-1:checked ~ .slider-controls-dots .slide-dot::after,
+#offer-1:checked ~ .slides .slide-drills {
+  display: block;
+}
+
+#offer-2:checked ~ .slider-controls-dots .slide-dot::after,
+#offer-2:checked ~ .slides .slide-hammer-drills {
+  display: block;
 }
 
 .slide-dot:not(:last-child) {
   margin-right: 12px;
-}
-
-.slide-dot:not(.dot-active) {
-  cursor: pointer;
-}
-
-.dot-active {
-  width: 10.5px;
-  height: 10.5px;
-  background-color: #ee3643;
-  border: 2px solid #ffffff;
 }
 
 /*------------- Популярные -------------*/
