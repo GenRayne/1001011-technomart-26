@@ -27,7 +27,7 @@ header .container {
 }
 
 header .top-panel {
-  margin-bottom: 45px;
+  margin-bottom: 46px;
   background-color: #293449;
 }
 
@@ -149,10 +149,6 @@ header button[type="submit"] {
   padding: 12px 10px 11.5px;
 }
 
-.user-actions a:not(.order) {
-  padding-left: 44px;
-}
-
 .user-actions a:active {
   color: rgba(255, 255, 255, 0.6);
   background-color: #161d29;
@@ -185,6 +181,14 @@ header button[type="submit"] {
   height: 16px;
   background-image: url(../img/icon-bookmark.svg);
   background-repeat: no-repeat;  
+}
+
+.user-actions .bookmarks {
+  padding-left: 44px;
+}
+
+.user-actions .cart {
+  padding-left: 50px;
 }
 
 .user-actions .cart::before {
@@ -223,13 +227,15 @@ header button[type="submit"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
   min-height: 77px;
 }
 
 .site-description {
+  position: relative;
+  top: 3px;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 19px;
   padding-left: 53px;
   width: 250px;
   font-size: 16px;
@@ -240,6 +246,7 @@ header button[type="submit"] {
 
 header .address {
   display: block;
+  width: 270px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -248,10 +255,10 @@ header .address {
 
 header .phone {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   padding: 9px;
-  padding-left: 74px;
-  min-width: 270px;
+  padding-left: 72px;
+  min-width: 265px;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -277,7 +284,7 @@ header .phone {
 
 .login-options a {
   display: block;
-  padding: 12px 25px;
+  padding: 12px 24px;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -285,7 +292,7 @@ header .phone {
 }
 
 .login-options a:not(:last-child):not(.username) {
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .account-area .username {
@@ -341,7 +348,8 @@ header .phone {
 
 .account-area .log-in {
   position: relative;
-  padding-left: 48px;
+  padding-left: 47px;
+  padding-right: 26px;
 }
 
 .account-area .log-in::before {
@@ -526,7 +534,7 @@ nav a:active {
 .offer-sm a {
   display: inline-block;
   padding: 10px;
-  min-width: 115px;
+  min-width: 135px;
   font-size: 14px;
   line-height: 18px;
   vertical-align: top;
@@ -733,6 +741,7 @@ nav a:active {
   position: absolute;
   top: 25px;
   right: 24px;
+  min-width: 253px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
