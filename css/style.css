@@ -231,6 +231,7 @@ header button[type="submit"] {
   margin: 0;
   margin-right: 10px;
   padding-left: 53px;
+  width: 250px;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -528,6 +529,7 @@ nav a:active {
   min-width: 115px;
   font-size: 14px;
   line-height: 18px;
+  vertical-align: top;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -793,6 +795,11 @@ nav a:active {
 
 .services p {
   line-height: 24px;
+  margin: 0;
+}
+
+.services-container p {
+  width: 380px;
 }
 
 .tabs-container {
@@ -924,6 +931,7 @@ main .about {
 .technomart-company .btn {
   display: inline-block;
   min-width: 220px;
+  vertical-align: top;
 }
 
 .about li {
@@ -1442,6 +1450,7 @@ ol.pages {
   font-size: 13px;
   line-height: 18px;
   text-align: center;
+  vertical-align: top;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
@@ -1676,6 +1685,20 @@ li:not(:last-child) .social {
 .map-modal iframe {
   margin: 0;
   border: none;
+}
+
+.map-modal .mapouter {
+  position: relative;
+  text-align: right;
+  height: 446px;
+  width: 941px;
+}
+
+.map-modal .gmap_canvas {
+  overflow: hidden;
+  background: none;
+  height: 446px;
+  width: 941px;
 }
 
 .write-us-modal {
