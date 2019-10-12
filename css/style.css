@@ -132,7 +132,7 @@ header button[type="submit"] {
   fill: #ee3643;
 }
 
-.search:focus{
+.search:focus {
   color: #000000;
 }
 
@@ -1071,7 +1071,7 @@ h1 {
   margin-left: 40px;  
 }
 
-.sort a:hover {
+.sort a:not(.sort-active):hover {
   color: #000000;
 }
 
