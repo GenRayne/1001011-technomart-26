@@ -1777,6 +1777,14 @@ li:not(:last-child) .social {
   background-color: #ffffff;
 }
 
+.continue-shopping-btn:hover {
+  background-color: #d5d5d5;
+}
+
+.continue-shopping-btn:active {
+  background-color: #c5c5c5;
+}
+
 .close-btn {
   position: absolute;
   top: 9px;
