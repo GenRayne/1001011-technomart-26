@@ -83,6 +83,17 @@ header ul {
   background-color: #ba2732;
 }
 
+header button[type="submit"] {
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: none;
+}
+
 .search {
   padding-left: 49px;
   padding-right: 10px;
@@ -93,6 +104,7 @@ header ul {
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
+  color: #ffffff;
   background-color: #293449;
   border: none;
 }
@@ -107,35 +119,34 @@ header ul {
   outline: none;
 }
 
-.search:focus + .search-text {
-  color: transparent;
-}
-
 .top-panel-container svg {
-  position: absolute;
-  top: 12px;
-  left: 17px;
   opacity: 0.3;
 }
 
-.search:hover + .search-text + svg,
-.search:focus + .search-text + svg {
+.search:hover ~ button svg,
+.search:focus ~ button svg {
   opacity: 1;
 }
 
-.search:focus + .search-text + svg .search-icon {
+.search:focus ~ button svg {
   fill: #ee3643;
 }
 
-.search-text {
+.search:focus{
+  color: #000000;
+}
+
+/*.search::placeholder {*/
+header .search-text {
   position: absolute;
   top: 12px;
   left: 49px;
+  padding: 10px 0;
   font-size: 17px;
   font-weight: 400;
   line-height: 18px;
-  font-family: inherit;
   color: #ffffff;
+  opacity: 1;
 }
 
 .user-actions a {
