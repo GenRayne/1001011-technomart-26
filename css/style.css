@@ -136,19 +136,6 @@ header button[type="submit"] {
   color: #000000;
 }
 
-/*.search::placeholder {*/
-header .search-text {
-  position: absolute;
-  top: 12px;
-  left: 49px;
-  padding: 10px 0;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 18px;
-  color: #ffffff;
-  opacity: 1;
-}
-
 .user-actions a {
   display: block;
   position: relative;
