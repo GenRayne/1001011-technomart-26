@@ -985,6 +985,7 @@ h1 {
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .breadcrumbs a::after {
