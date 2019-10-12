@@ -43,6 +43,29 @@ try {
     closeModal(writeModal);
   });
 
+  // Нижний слайдер с Сервисами
+
+  var tabs = document.querySelectorAll('.tab'),
+      services = document.querySelectorAll('.service');
+
+  for (var tab of tabs) {
+    tab.addEventListener('click', function (ev) {
+      for (var j = 0; j < tabs.length; j++) {
+        tabs[j].classList.remove('tab-active');
+      }
+      ev.target.classList.add('tab-active');
+
+      for (var service of services) {
+        if (ev.target.dataset.tab === service.dataset.content) {
+          for (var j = 0; j < services.length; j++) {
+            services[j].classList.remove('service-active');
+          }
+          service.classList.add('service-active');
+        }
+      }
+    });
+  }
+
 } catch (err) {
   console.log(err);
 }

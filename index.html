@@ -285,18 +285,18 @@
         <div class="tabs-container">
           <ul class="tabs">
             <li>
-              <button class="tab tab-active" type="button">Доставка</button>
+              <button class="tab tab-active" type="button" data-tab="delivery">Доставка</button>
             </li>
             <li>
-              <button class="tab" type="button">Гарантия</button>
+              <button class="tab" type="button" data-tab="guarantee">Гарантия</button>
             </li>
             <li>
-              <button class="tab" type="button">Кредит</button>
+              <button class="tab" type="button" data-tab="credit">Кредит</button>
             </li>
           </ul>
 
           <div class="services-container">
-            <section class="about-delivery">
+            <section class="service about-delivery service-active" data-content="delivery">
               <h3 class="subsection-heading">Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо <br>
@@ -306,7 +306,7 @@
               </p>
             </section>
 
-            <section class="about-guarantee">
+            <section class="service about-guarantee" data-content="guarantee">
               <h3 class="subsection-heading">Гарантия</h3>
               <p>
                 Если купленный у нас товар поломается или заискрит, <br>
@@ -315,7 +315,7 @@
               </p>
             </section>
 
-            <section class="about-credit service-active">
+            <section class="service about-credit" data-content="credit">
               <h3 class="subsection-heading">Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще! <br>
