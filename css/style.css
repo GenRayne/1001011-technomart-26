@@ -1171,6 +1171,13 @@ h1 {
   cursor: pointer;
 }
 
+.filled-range-line {
+  display: block;
+  height: 2px;
+  width: 152px;
+  background-color: #00cb75;
+}
+
 .min-range-control,
 .max-range-control {
   position: absolute;
@@ -1183,7 +1190,7 @@ h1 {
 }
 
 .max-range-control {
-  right: 20px;
+  right: 40px;
 }
 
 .price-inputs {
