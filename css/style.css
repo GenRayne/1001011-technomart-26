@@ -109,6 +109,12 @@ header button[type="submit"] {
   border: none;
 }
 
+.search::placeholder {
+  line-height: 40px;
+  color: #ffffff;
+  opacity: 1;
+}
+
 .search:hover,
 .user-actions a:hover {
   background-color: #212a3a;
@@ -1665,6 +1671,11 @@ li:not(:last-child) .social {
   top: calc(50vh - 223px);
   left: calc(50vw - 479px);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+.map-modal iframe {
+  margin: 0;
+  border: none;
 }
 
 .write-us-modal {
