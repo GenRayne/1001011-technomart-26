@@ -1432,6 +1432,11 @@ input[type="radio"]:disabled + .power {
   overflow: hidden;
 }
 
+.b-bfg-2000 img {
+  position: relative;
+  left: 8px;
+}
+
 .item-card.new::after {
   content: "";
   display: block;
