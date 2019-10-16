@@ -1630,7 +1630,7 @@ footer a {
 
 footer .footer-top {
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 31px;
   width: 940px;
 }
 
@@ -1649,13 +1649,31 @@ footer .company {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .company-links a,
 .offers-links a {
-  margin-left: 40px;
-  padding: 10px;
+  padding: 10px 0;
+}
+
+.company-links a {
+  margin-left: 57px;
+}
+
+.offers-links a {
+  margin-left: 58px;
+  color: #ffd180;
+}
+
+.company-links .link-delivery {
+  margin-left: 61px;
+}
+
+.company-links .link-catalog,
+.offers-links .link-instrument,
+.offers-links .link-machinery {
+  margin-left: 60px;
 }
 
 .company-links a {
@@ -1669,10 +1687,6 @@ footer .company {
   align-items: baseline;
 }
 
-.offers-links a {
-  color: #ffd180;
-}
-
 .links a:hover {
   text-decoration: underline;
 }
@@ -1684,6 +1698,7 @@ footer .company {
 footer .address,
 footer .phone {
   display: block;
+  margin-left: 3px;
   color: #f3f7f9;
 }
 
@@ -1697,15 +1712,17 @@ footer .phone {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto;
-  padding: 17px 0 16px;
+  padding: 21px 0 13px;
   width: 940px;
   font-size: 16px;
   line-height: 18px;
 }
 
 .copyright {
+  margin-left: 1px;
+  margin-right: 162px;
   color: #ffffff;
 }
 
@@ -1750,14 +1767,15 @@ li:not(:last-child) .social {
 .feedback {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 120px;
 }
 
 .feedback p:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 52px;
 }
 
 .feedback p:last-child {
-  margin-right: 15px;
+  margin-right: 11px;
 }
 
 .feedback span {
