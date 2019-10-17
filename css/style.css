@@ -1500,7 +1500,7 @@ input[type="radio"]:disabled + .power {
   background-image: linear-gradient(to bottom, #ffffff 170px, transparent 170px);
   border: 1px solid #e5e5e5;
   border-bottom: none;
-  /*opacity: 0;*/
+  opacity: 0;
 }
 
 .item-options:hover {
