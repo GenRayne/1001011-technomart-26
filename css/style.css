@@ -298,7 +298,7 @@ header .phone {
 .account-area .username {
   position: relative;
   padding-left: 47px;
-  padding-right: 20px;
+  padding-right: 25px;
   text-align: right;
 }
 
@@ -306,7 +306,7 @@ header .phone {
   content: "";
   display: block;
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 14px;
   width: 20px;
   height: 18px;
@@ -385,7 +385,8 @@ header .phone {
 .account-links a {
   display: block;
   position: relative;
-  padding: 7px 17px;
+  margin-right: 4px;
+  padding: 7px 14px;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
@@ -403,7 +404,7 @@ header .phone {
   display: block;
   position: absolute;
   top: 15px;
-  right: -2px;
+  right: -5px;
   width: 4px;
   height: 4px;
   background-color: #32425c;
@@ -1084,14 +1085,15 @@ h1 {
 
 .catalog-h1 {
   margin: 0 auto 20px;
-  padding: 30px 30px 29px;
+  padding: 30px 28px 29px;
   width: 940px;
   background-color: #f2f6f8;
 }
 
 .breadcrumbs {
   display: flex;
-  margin: 23px auto;
+  align-items: center;
+  margin: 21px auto 20px;
   padding: 0;
   width: 940px;
   list-style: none;
@@ -1099,19 +1101,19 @@ h1 {
 
 .breadcrumbs a {
   position: relative;
-  margin-right: 40px;
+  margin-right: 42px;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
 }
 
-.breadcrumbs a::after {
+.breadcrumbs a::before {
   content: "";
   display: block;
   position: absolute;
   top: 2px;
-  right: -25px;
+  left: -24px;
   width: 8px;
   height: 12px;
   background-image: url(../img/icon-right-small.svg);
@@ -1120,11 +1122,19 @@ h1 {
 
 .breadcrumbs .home {
   display: block;
+  position: relative;
+  top: -1px;
+  left: -1px;
+  margin-right: 39px;
   width: 14px;
   height: 12px;
   background-image: url(../img/icon-home.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.breadcrumbs .home::before {
+  display: none;
 }
 
 .all-goods-related {
@@ -1141,7 +1151,7 @@ h1 {
 .catalog-section-heading {
   margin-top: 0;
   margin-bottom: 20px;
-  padding: 10px 18px;
+  padding: 10px 19px;
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
@@ -1162,6 +1172,7 @@ h1 {
 .sort {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .sort-heading {
@@ -1178,12 +1189,20 @@ h1 {
 }
 
 .sort a {
-  margin-right: 20px;
+  margin-right: 15px;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #ee3643;
+}
+
+.sort .sort-by-price {
+  margin-right: 31px;
+}
+
+.sort .sort-by-type {
+  margin-right: 24px;
 }
 
 .sort a:not(.sort-down) {
@@ -1212,8 +1231,12 @@ h1 {
   border-left-color: transparent;
 }
 
+.sort-up {
+  transform: translateX(-8px);
+}
+
 .sort-down {
-  transform: rotate(180deg);
+  transform: translateX(-3px) rotate(180deg);
 }
 
 .sort .sort-arrow-active,
@@ -1252,9 +1275,14 @@ h1 {
 
 .filter fieldset {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   padding: 0 0 25px;
   border: none;
+}
+
+fieldset.manufacturer-filter {
+  margin-bottom: 17px;
+  padding: 0 0 22px;
 }
 
 .filter .price-filter,
@@ -1263,7 +1291,7 @@ h1 {
 }
 
 .filter legend {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
@@ -1320,7 +1348,7 @@ h1 {
 
 .min-price,
 .max-price {
-  padding: 10px;
+  padding: 9px 9px 11px 13px;
   width: 95px;
   font-size: 17px;
   line-height: 18px;
@@ -1331,6 +1359,8 @@ h1 {
 }
 
 .price-range-dash {
+  position: relative;
+  top: -1px;
   font-size: 16px;
   line-height: 18px;
   color: #444444;
@@ -1373,6 +1403,7 @@ input[type="radio"]:disabled + .power {
 .filter input[type="checkbox"]:checked + label:hover::before,
 .filter input[type="radio"] + label:hover::before,
 .filter input[type="radio"]:checked + label:hover::before {
+  position: relative;
   opacity: 0.3;
 }
 
@@ -1385,16 +1416,18 @@ input[type="radio"]:disabled + .power {
 }
 
 .filter input[type="radio"] + label::before {
+  left: -1px;
   background-image: url(../img/radio-off.svg);
 }
 
 .filter input[type="radio"]:checked + label::before {
+  left: -1px;
   background-image: url(../img/radio-on.svg);
 }
 
 .apply-filter {
-  margin-top: 40px;
-  padding: 10px;
+  margin-top: 37px;
+  padding: 10px 10px 8px;
   min-width: 140px;
   font-size: 13px;
   line-height: 18px;
@@ -1411,6 +1444,7 @@ input[type="radio"]:disabled + .power {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 32px;
   padding: 0;
   list-style: none;
 }
@@ -1421,7 +1455,7 @@ input[type="radio"]:disabled + .power {
 }
 
 .items li {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .item-card {
@@ -1458,7 +1492,7 @@ input[type="radio"]:disabled + .power {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 45px 42px 21px;
+  padding: 43px 42px 23px 41px;
   width: 100%;
   height: 100%;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1466,7 +1500,7 @@ input[type="radio"]:disabled + .power {
   background-image: linear-gradient(to bottom, #ffffff 170px, transparent 170px);
   border: 1px solid #e5e5e5;
   border-bottom: none;
-  opacity: 0;
+  /*opacity: 0;*/
 }
 
 .item-options:hover {
@@ -1515,9 +1549,21 @@ input[type="radio"]:disabled + .power {
 
 .buy-btn {
   margin-bottom: 8px;
+  padding-left: 14px;
   color: #ffffff;
   background-color: #63a63e;
   box-shadow: inset 0px -3px 0 0 #367315;
+}
+
+.buy-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/cart-icon.svg);
+  background-repeat: no-repeat;
+  opacity: 0.3;
 }
 
 .buy-btn:hover {
@@ -1528,8 +1574,12 @@ input[type="radio"]:disabled + .power {
   background-color: #518534;
 }
 
+.buy-btn:hover::before {
+  opacity: 1;
+}
+
 .bookmark-btn {
-  padding: 8px 10px 6px;
+  padding: 8px 10px 6px 14px;
   width: 100%;
   color: #32425c;
   background-color: #ffffff;
@@ -1549,7 +1599,7 @@ input[type="radio"]:disabled + .power {
 
 ol.pages {
   display: flex;
-  margin: 0 0 60px;
+  margin: 0 0 40px;
   padding: 0;
   list-style: none;
 }
@@ -1557,19 +1607,19 @@ ol.pages {
 .pages a {
   display: inline-block;
   margin-right: 10px;
-  padding: 10px;
+  padding: 9px 9px 11px 11px;
   min-width: 38px;
   width: auto;
   height: 38px;
   font-size: 13px;
   line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
   vertical-align: top;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
 
-/*.pages a:not(.page-active):hover {*/
 .pages a:hover {
   border: 1px solid #bdc6ca;
 }
@@ -1597,13 +1647,17 @@ ol.pages {
 }
 
 .general-desc-bg-wrapper {
-  padding: 45px 0 55px;
+  padding: 40px 0 55px;
   background-color: #f4f7f9;
 }
 
 .general-description {
   margin: 0 auto;
   width: 940px;
+}
+
+.general-description h2 {
+  margin-bottom: 26px;
 }
 
 .general-description p {
