@@ -2067,7 +2067,7 @@ li:not(:last-child) .social {
     border-color: #d7dcde;
   }
   50% {
-    background-color: rgba(239, 51, 65, 0.3);
+    background-color: rgba(239, 51, 65, 0.2);
     border-color: rgb(239, 51, 65);
   }
 }

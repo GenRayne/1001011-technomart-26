@@ -7,12 +7,10 @@ try {
 
   mapPicBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-
     if (!writeModal.classList.contains('hidden') || !addedToCartModal.classList.contains('hidden')) {
       closeModal(writeModal);
       closeModal(addedToCartModal);
     }
-
     openModal(mapModal);
   });
 
@@ -32,18 +30,33 @@ try {
       messageInput = writeModal.querySelector('.message-input textarea'),
       sendBtn = writeModal.querySelector('.send-btn');
 
-  sendBtn.addEventListener('click', function (ev) {
+  var storage = {};  
+  storage.support = true;
+
+  try {
+    storage.name = localStorage.getItem('name') || '';
+    storage.email = localStorage.getItem('email') || '';
+  } catch (err) {
+    console.log(err);
+    storage.support = false;
+  }
+
+  writeModal.addEventListener('submit', function (ev) {
     if (!messageInput.value || !nameInput.value || !emailInput.value) {
       ev.preventDefault();
       writeModal.classList.add('shake');
-      writeModal.addEventListener('animationend', function (ev) {
+      writeModal.addEventListener('animationend', function () {
         writeModal.classList.remove('shake');
-      })
+      });
       checkValue(nameInput);
       checkValue(emailInput);
       checkValue(messageInput);
+    } else {
+      if (storage.support) {
+        localStorage.setItem('name', nameInput.value);
+        localStorage.setItem('email', emailInput.value);
+      }
     }
-    return;
   });
 
   writeBtn.addEventListener('click', function (ev) {
@@ -53,8 +66,17 @@ try {
       closeModal(mapModal);
       closeModal(addedToCartModal);
     }
-
     openModal(writeModal);
+    nameInput.focus();
+
+    nameInput.value = storage.name;
+    emailInput.value = storage.email;
+    if (nameInput.value) {
+      emailInput.focus();
+    }
+    if (emailInput.value) {
+      messageInput.focus();
+    }
   });
 
   closeMessageBtn.addEventListener('click', function (ev) {
@@ -68,7 +90,7 @@ try {
       services = document.querySelectorAll('.service');
 
   for (var tab of tabs) {
-    tab.addEventListener('click', function (ev) {
+    tab.addEventListener('click', function () {
       for (var j = 0; j < tabs.length; j++) {
         tabs[j].classList.remove('tab-active');
       }
@@ -113,7 +135,6 @@ try {
 
   closeAddedToCartBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
-
     closeModal(addedToCartModal);
   });
 
@@ -129,14 +150,13 @@ try {
 function openModal (modal) {
   modal.classList.remove('hidden');
   modal.classList.add('slide-in');
-  modal.addEventListener('animationend', function (ev) {
+  modal.addEventListener('animationend', function () {
     modal.classList.remove('slide-in');
   });
 }
 
 function closeModal (modal) {
   modal.classList.add('slide-out');
-  // hideModal.bind(modal);
   modal.addEventListener('animationend', hideModal);
 }
 
