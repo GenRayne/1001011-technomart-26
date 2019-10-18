@@ -2035,6 +2035,14 @@ li:not(:last-child) .social {
   animation: slide-to-right 0.5s both;
 }
 
+.red-paint {
+  animation: red-paint 1s;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
 @keyframes slide-from-left {
   0% {
     transform: translateX(-150vw);
@@ -2050,6 +2058,29 @@ li:not(:last-child) .social {
   }
   100% {
     transform: translateX(150vw);
+  }
+}
+
+@keyframes red-paint {
+  0%, 100% {
+    background-color: rgba(239, 51, 65, 0);
+    border-color: #d7dcde;
+  }
+  50% {
+    background-color: rgba(239, 51, 65, 0.3);
+    border-color: rgb(239, 51, 65);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  } 
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
   }
 }
 

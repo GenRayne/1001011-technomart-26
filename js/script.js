@@ -25,7 +25,26 @@ try {
 
   var writeBtn = document.querySelector('.write-us-btn'),
       writeModal = document.querySelector('.write-us-modal'),
-      closeMessageBtn = writeModal.querySelector('.close-btn');
+      closeMessageBtn = writeModal.querySelector('.close-btn'),
+
+      nameInput = writeModal.querySelector('.name-input input'),
+      emailInput = writeModal.querySelector('.email-input input'),
+      messageInput = writeModal.querySelector('.message-input textarea'),
+      sendBtn = writeModal.querySelector('.send-btn');
+
+  sendBtn.addEventListener('click', function (ev) {
+    if (!messageInput.value || !nameInput.value || !emailInput.value) {
+      ev.preventDefault();
+      writeModal.classList.add('shake');
+      writeModal.addEventListener('animationend', function (ev) {
+        writeModal.classList.remove('shake');
+      })
+      checkValue(nameInput);
+      checkValue(emailInput);
+      checkValue(messageInput);
+    }
+    return;
+  });
 
   writeBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
@@ -88,7 +107,6 @@ try {
           closeModal(writeModal);
         }
       }
-
       openModal(addedToCartModal);
     });
   }
@@ -111,13 +129,28 @@ try {
 function openModal (modal) {
   modal.classList.remove('hidden');
   modal.classList.add('slide-in');
+  modal.addEventListener('animationend', function (ev) {
+    modal.classList.remove('slide-in');
+  });
 }
 
 function closeModal (modal) {
-  modal.classList.remove('slide-in');
   modal.classList.add('slide-out');
-  setTimeout(function() {
-    modal.classList.remove('slide-out');
-    modal.classList.add('hidden');
-  }, 600);
+  // hideModal.bind(modal);
+  modal.addEventListener('animationend', hideModal);
+}
+
+function hideModal () {
+  this.classList.remove('slide-out');
+  this.classList.add('hidden');
+  this.removeEventListener('animationend', hideModal);
+}
+
+function checkValue (input) {
+  if (!input.value) {
+    input.classList.add('red-paint');
+  }
+  input.addEventListener('animationend', function () {
+    input.classList.remove('red-paint');
+  });
 }
