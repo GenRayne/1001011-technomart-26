@@ -90,7 +90,7 @@ try {
       services = document.querySelectorAll('.service');
 
   for (var tab of tabs) {
-    tab.addEventListener('click', function () {
+    tab.addEventListener('click', function (ev) {
       for (var j = 0; j < tabs.length; j++) {
         tabs[j].classList.remove('tab-active');
       }
@@ -114,10 +114,10 @@ try {
 try {
   // Модальное окно "Товар добавлен в корзину"
 
-  var buyBtns = document.querySelectorAll(".buy-btn"),
-      addedToCartModal = document.querySelector(".added-to-cart"),
-      closeAddedToCartBtn = addedToCartModal.querySelector(".close-btn"),
-      continueBtn = addedToCartModal.querySelector(".continue-shopping-btn");
+  var buyBtns = document.querySelectorAll('.buy-btn'),
+      addedToCartModal = document.querySelector('.added-to-cart'),
+      closeAddedToCartBtn = addedToCartModal.querySelector('.close-btn'),
+      continueBtn = addedToCartModal.querySelector('.continue-shopping-btn');
 
   for (var btn of buyBtns) {
     btn.addEventListener('click', function (ev) {

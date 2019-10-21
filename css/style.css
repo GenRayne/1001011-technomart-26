@@ -683,7 +683,7 @@ nav a:active {
   position: absolute;
   top: 50.5%;
   width: 100%;
-  z-index: 100;
+  z-index: 50;
 }
 
 .slider-controls-arrows .arr {
@@ -712,7 +712,7 @@ nav a:active {
   display: flex;
   justify-content: space-between;
   width: 30px;
-  z-index: 100;
+  z-index: 50;
 }
 
 .slide-dot {
@@ -754,6 +754,7 @@ nav a:active {
 .popular-goods,
 .popular-manufacturers {
   position: relative;
+  padding-right: 1px;
 }
 
 .popular-goods .subsection-heading,
@@ -1008,11 +1009,13 @@ main .about {
 
 .about p {
   margin-bottom: 24px;
+  width: 520px;
   line-height: 24px;
 }
 
 .about p:last-of-type {
   margin-bottom: 21px;
+  width: 400px;
 }
 
 .about ul {
@@ -1060,7 +1063,12 @@ main .about {
   margin-bottom: 36px;
 }
 
+.technomart-contacts {
+  width: 300px;
+}
+
 .technomart-contacts p:last-of-type {
+  width: 210px;
   margin-bottom: 31px;
 }
 
@@ -1444,7 +1452,7 @@ input[type="radio"]:disabled + .power {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 1px;
   padding: 0;
   list-style: none;
 }
@@ -1599,7 +1607,7 @@ input[type="radio"]:disabled + .power {
 
 ol.pages {
   display: flex;
-  margin: 0 0 40px;
+  margin: 32px 0 40px;
   padding: 0;
   list-style: none;
 }
@@ -1780,6 +1788,7 @@ footer .phone {
 }
 
 .copyright {
+  margin: 0 162px 0 1px;
   margin-left: 1px;
   margin-right: 162px;
   color: #ffffff;
@@ -1829,15 +1838,19 @@ li:not(:last-child) .social {
   margin-left: 120px;
 }
 
-.feedback p:not(:last-child) {
+.feedback p {
+  margin: 0;
+}
+
+.feedback div:not(:last-child) {
   margin-right: 52px;
 }
 
-.feedback p:last-child {
+.feedback div:last-child {
   margin-right: 11px;
 }
 
-.feedback span {
+.feedback p {
   color: #ffffff;
 }
 
@@ -1859,7 +1872,7 @@ li:not(:last-child) .social {
 .modal {
   position: fixed;
   background-color: #ffffff;
-  z-index: 50;
+  z-index: 100;
 }
 
 .map-modal {
