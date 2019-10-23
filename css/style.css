@@ -818,6 +818,7 @@ nav a:active {
 
 .manufacturers a:active {
   box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+  opacity: 0.3;
 }
 
 .manufacturers img {
@@ -1251,7 +1252,7 @@ h1 {
 .sort .sort-arrow-active,
 .sort .sort-up:active,
 .sort .sort-down:active {
-  border-bottom-color: #ee3643;
+  border-bottom: 10px solid #ee3643;
 }
 
 .sort .sort-active,
@@ -1412,7 +1413,6 @@ input[type="radio"]:disabled + .power {
 .filter input[type="checkbox"]:checked + label:hover::before,
 .filter input[type="radio"] + label:hover::before,
 .filter input[type="radio"]:checked + label:hover::before {
-  position: relative;
   opacity: 0.3;
 }
 
@@ -1581,7 +1581,10 @@ input[type="radio"]:disabled + .power {
 
 .buy-btn:active {
   background-color: #518534;
+  box-shadow: none;
 }
+
+
 
 .buy-btn:hover::before {
   opacity: 1;
@@ -1761,6 +1764,7 @@ footer .company {
 }
 
 .links a:active {
+  text-decoration: none;
   opacity: 0.5;
 }
 
