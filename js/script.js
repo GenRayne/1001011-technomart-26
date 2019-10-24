@@ -115,6 +115,7 @@ try {
   // Модальное окно "Товар добавлен в корзину"
 
   var buyBtns = document.querySelectorAll('.buy-btn'),
+      bookmarkBtns = document.querySelectorAll('.bookmark-btn'),
       addedToCartModal = document.querySelector('.added-to-cart'),
       closeAddedToCartBtn = addedToCartModal.querySelector('.close-btn'),
       continueBtn = addedToCartModal.querySelector('.continue-shopping-btn');
@@ -130,6 +131,26 @@ try {
         }
       }
       openModal(addedToCartModal);
+    });
+
+    // Отображение кнопок на товаре при фокусе
+
+    btn.addEventListener('focus', function (ev) {
+      ev.path[1].style.opacity = '1';
+    });
+
+    btn.addEventListener('blur', function (ev) {
+      ev.path[1].removeAttribute('style');
+    });
+  }
+
+  for (var btn of bookmarkBtns) {
+    btn.addEventListener('focus', function (ev) {
+      ev.path[1].style.opacity = '1';
+    });
+    
+    btn.addEventListener('blur', function (ev) {
+      ev.path[1].removeAttribute('style');
     });
   }
 
