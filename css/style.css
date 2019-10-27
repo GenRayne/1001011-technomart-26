@@ -442,6 +442,7 @@ a {
 
 .main-nav a:active {
   opacity: 0.5;
+  background-color: #1d2739;
 }
 
 .nav-item:nth-child(1) a {
